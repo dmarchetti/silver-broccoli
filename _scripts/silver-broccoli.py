@@ -14,8 +14,15 @@ dmarchetti@gmail.com
 import subprocess, os, re, time, shlex, sys
 
 def subprocess_cmd(command):
-	pass # Remember to implement this near future!
+	p = subprocess.Popen(command,stdout=subprocess.PIPE)
+	p.communicate()
+	print proc_stdout
+	#print proc_stderr
 
+args = shlex.split('ls -l')
+subprocess_cmd(args)
+
+"""
 def confirm_exec(prompt='do you want to proceed? ', retries=3, complaint='yes or no, please!'):
 	while True:
 		ok = raw_input(prompt)
@@ -30,7 +37,7 @@ def confirm_exec(prompt='do you want to proceed? ', retries=3, complaint='yes or
 
 # MAKE A FILTER TO EXCLUDE SYSTEM PARTITIONS (SYS/PROC/TMPFS) AND LVM PARTITIONS INCLUDING ALL RAW PARTITIONS FOR MIGRATION
 def check_fs():
-	
+
 	file_name = 'fsdump001.tmp'
 	lst_mpoints = list()
 
@@ -43,7 +50,7 @@ def check_fs():
 		if not re.search('^/',line): continue
 		if re.findall('^/dev/mapper.+', line):continue
 		mpoints = line.split()
-		lst_mpoints.append(mpoints[2])	
+		lst_mpoints.append(mpoints[2])
 
 	tmp_file = open(file_name, 'wb')
 
@@ -54,7 +61,7 @@ def check_fs():
 		tmp_file.write(line);
 
 	tmp_file.close()
-	
+
 	return file_name
 	return lst_logs
 
@@ -69,15 +76,17 @@ def get_sizing(filename):
 	lst_size = dict()
 	for i in filename:
 		args = shlex.split('df %s'%i)
-		out, err = subprocess.Popen( args, stdout=subprocess.PIPE ).communicate()
-		out = out.split()
-		lst_size[out[12]] = out[8]
-	
-	return lst_size.items()	
+		subprocess_cmd(args)
+		#out, err = subprocess.Popen( args, stdout=subprocess.PIPE ).communicate()
+		#out = out.split()
+		print proc_stdout
+		#lst_size[out[12]] = out[8]
+
+	return lst_size.items()
 
 #---------------------------------------------INICIO EXECUCAO------------------------------------------------------
 
-print """
+print
 Before you begin its important to do the steps bellow, don't continue if you not ready!\n
 
 1. Make a backup of your data and make sure that the restore is working! If it is a VM, you can simple clone!
@@ -90,7 +99,7 @@ Before you begin its important to do the steps bellow, don't continue if you not
 ***********************
 \n\n
 THIS SCRIPT WILL MIGRATE RAW PARTITIONS TO LVM PARTIONS THIS OPERATIONS CAN CAUSE DATA LOSS! MAKE SURE IF YOUR BACKUP IS OK!\n
-"""
+
 
 confirm_exec()
 
@@ -113,7 +122,7 @@ while len(fdev) < 9 or len(vgname) < 3 or len(mpname) < 4:
 	if len(mpname) < 1: mpname = '/mnt/root'
 	time.sleep(2)
 	if fdev == "exit":
-		break		
+		break
 
 time.sleep(2)
 
@@ -138,7 +147,6 @@ out, err = subprocess.Popen(args_vgc, stdout=subprocess.PIPE, stderr=subprocess.
 lst_logs.append(out)
 lst_logs.append(err)
 
-
 print "*** CRIANDO LOGICAL VOLUMES ***\n"
 
 time.sleep(1)
@@ -152,10 +160,10 @@ for k, v in _sizing:
 		print 'mount /dev/%s/lv_root %s' %(vgname,mpname)
 		print 'find / -xdev | cpio -pvmd %s' %(mpname)
 		continue
-	
+
 	lvname = re.findall('[a-z0-9]+$',k)[0]
 	print 'lvcreate -L %s lv_%s %s' %(v,lvname,vgname)
 	print 'mkfs.ext3 /dev/%s/lv_%s' %(vgname,lvname)
-	
-		
+"""
+
 #print 'mount /dev/%s/lv_%s %s%s' %(vgname,lvname,mpname,k)
