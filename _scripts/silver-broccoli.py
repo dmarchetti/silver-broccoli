@@ -1,4 +1,3 @@
-#!/usr/bin/python
 #-*- coding: utf-8 -*-
 
 """
@@ -14,15 +13,12 @@ dmarchetti@gmail.com
 import subprocess, os, re, time, shlex, sys
 
 def subprocess_cmd(command):
-	p = subprocess.Popen(command,stdout=subprocess.PIPE)
-	p.communicate()
-	print proc_stdout
-	#print proc_stderr
+	procout, procerr = subprocess.Popen(command,stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()
+	return 'OK: ',procout
+	return 'ERROR: ',procerr
 
-args = shlex.split('ls -l')
-subprocess_cmd(args)
 
-"""
+
 def confirm_exec(prompt='do you want to proceed? ', retries=3, complaint='yes or no, please!'):
 	while True:
 		ok = raw_input(prompt)
@@ -68,25 +64,33 @@ def check_fs():
 #GENERATE LOGS
 def create_logs():
 	for line in lst_logs:
-		time.sleep(1)
-		print line
+		#time.sleep(1)
+		print line.rstrip()
 
 #GET SIZING FOR SELECTED PARTITIONS
 def get_sizing(filename):
 	lst_size = dict()
 	for i in filename:
 		args = shlex.split('df %s'%i)
-		subprocess_cmd(args)
+		out = subprocess_cmd(args)
 		#out, err = subprocess.Popen( args, stdout=subprocess.PIPE ).communicate()
-		#out = out.split()
-		print proc_stdout
-		#lst_size[out[12]] = out[8]
+		for line in out:
+			if re.search('OK', line): continue
+			out = line.split()
+			#print out[12],out[8]
+			lst_size[out[12]] = out[8]
 
 	return lst_size.items()
 
+def create_fs(call_fsystem,vgname,mountpoint,lvname):
+		print 'lvcreate -L %s lv_%s %s' %(size, lvname, vgname)
+		print 'mkfs.ext3 /dev/%s/lv_%s' %(vgname, lvname)
+		print 'mount /dev/%s/lv_%s %s%s' %(vgname, lvname, mountpoint, fsystem)
+		print 'find / -xdev | cpio -pvmd %s%s' %(mountpoint, fsystem)
+
 #---------------------------------------------INICIO EXECUCAO------------------------------------------------------
 
-print
+print """
 Before you begin its important to do the steps bellow, don't continue if you not ready!\n
 
 1. Make a backup of your data and make sure that the restore is working! If it is a VM, you can simple clone!
@@ -99,7 +103,7 @@ Before you begin its important to do the steps bellow, don't continue if you not
 ***********************
 \n\n
 THIS SCRIPT WILL MIGRATE RAW PARTITIONS TO LVM PARTIONS THIS OPERATIONS CAN CAUSE DATA LOSS! MAKE SURE IF YOUR BACKUP IS OK!\n
-
+"""
 
 confirm_exec()
 
@@ -110,60 +114,67 @@ timestr = time.strftime('%Y%m%d-%H%M%S')
 lst_logs = list()
 
 #GET GENERAL INFORMATION
-fdev = "None"
-vgname = "None"
-while len(fdev) < 9 or len(vgname) < 3 or len(mpname) < 4:
+fdev = 'nil'
+vgname = 'nil'
+mountpoint = 'nil'
+while len(fdev) < 9 or len(vgname) < 3 or len(mountpoint) < 4:
 	print "\n***INFORME OS DADOS ABAIXO OU DIGITE exit PARA SAIR***\n"
 	fdev = raw_input("Insira o disco disponível para migração: ")
 	vgname = raw_input("Insira um nome para o volume group: ")
-	mpname = raw_input("Insira o ponto de montagem para a particao ROOT: ")
+	mountpoint = raw_input("Insira o ponto de montagem para a particao ROOT: ")
 	if len(fdev) < 1: fdev = '/dev/sdd1'
 	if len(vgname) < 1: vgname = 'vg00'
-	if len(mpname) < 1: mpname = '/mnt/root'
-	time.sleep(2)
+	if len(mountpoint) < 1: mountpoint = '/mnt/root'
+	time.sleep(1)
 	if fdev == "exit":
 		break
 
-time.sleep(2)
+
+
+print "\n*** PREPARANDO DISCO E CRIANDO VOLUME GROUP ***\n"
+
+time.sleep(1)
+
+args = 'vgscan'
+out = subprocess_cmd(args)
+lst_logs.append('%s: %s'%(timestr,out))
+
+args = shlex.split('pvcreate %s'%fdev)
+out = subprocess_cmd(args)
+lst_logs.append('%s: %s'%(timestr,out))
+
+args = shlex.split('vgcreate %s %s'%(vgname,fdev))
+out = subprocess_cmd(args)
+lst_logs.append('%s: %s'%(timestr,out))
+
+time.sleep(1)
+
+print 'mkdir -p %s' %(mountpoint)
 
 _fhandle = open(check_fs())
-_sizing = get_sizing(_fhandle)
 
-print "\n*** PREPARANDO DISCO E CRIANDO VOLUMES GROUP ***\n"
-
+print '\n*** CRIANDO LOGICAL VOLUME ROOT ***\n'
 time.sleep(1)
 
-out, err = subprocess.Popen(['vgscan'], stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()
-lst_logs.append(out)
-lst_logs.append(err)
+for fsystem, size in get_sizing(_fhandle):
+	if re.search('^/$', fsystem):
+		create_fs(fsystem,vgname,mountpoint,lvname='root')
 
-args_pvc = shlex.split('pvcreate %s'%fdev)
-out, err = subprocess.Popen(args_pvc, stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()
-lst_logs.append(out)
-lst_logs.append(err)
-
-args_vgc = shlex.split('vgcreate %s %s'%(vgname,fdev))
-out, err = subprocess.Popen(args_vgc, stdout=subprocess.PIPE, stderr=subprocess.PIPE).communicate()
-lst_logs.append(out)
-lst_logs.append(err)
-
-print "*** CRIANDO LOGICAL VOLUMES ***\n"
-
+print '\n*** CRIANDO DEMAIS LOGICAL VOLUMES ***\n'
 time.sleep(1)
 
-mount_buffer = list()
-for k, v in _sizing:
-	if re.search('^/$',k):
-		print 'lvcreate -L %s lv_root %s '%(v,vgname)
-		print 'mkfs.ext3 /dev/%s/lv_root' %(vgname)
-		print 'mkdir -p %s' %(mpname)
-		print 'mount /dev/%s/lv_root %s' %(vgname,mpname)
-		print 'find / -xdev | cpio -pvmd %s' %(mpname)
-		continue
+_fhandle.seek(0)
 
-	lvname = re.findall('[a-z0-9]+$',k)[0]
-	print 'lvcreate -L %s lv_%s %s' %(v,lvname,vgname)
-	print 'mkfs.ext3 /dev/%s/lv_%s' %(vgname,lvname)
-"""
+for fsystem, size in get_sizing(_fhandle):
+	if re.search('^/$', fsystem): continue
+	lvname = re.findall('[a-z0-9]+$', fsystem)[0]
+	print fsystem,'-',vgname,'-',mountpoint,'-',lvname,'-',size
+	create_fs(fsystem,vgname,mountpoint,lvname)
 
-#print 'mount /dev/%s/lv_%s %s%s' %(vgname,lvname,mpname,k)
+_fhandle.close()
+
+	#print 'lvcreate -L %s lv_root %s '%(v,lvname,vgname)
+	#print 'mkfs.ext3 /dev/%s/lv_%s' %(vgname)
+	#print 'mount /dev/%s/lv_root %s' %(vgname,mpname)
+	#print 'find / -xdev | cpio -pvmd %s' %(mpname)
+	
