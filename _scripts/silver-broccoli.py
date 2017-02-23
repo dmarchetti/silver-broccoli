@@ -87,40 +87,41 @@ def get_sizing(filename):
 
 #RUN BASH COMMANDS TO CREATE FILESYSTEM
 def create_fs(fsystem,vgname,mountpoint,lvname):
-	lst_commands = ['lvcreate -L %s -n lv_%s %s --yes' %(size, lvname, vgname),'mkfs.ext3 /dev/%s/lv_%s' %(vgname, lvname),'mount /dev/%s/lv_%s %s' %(vgname, lvname, mountpoint)]
+	#lst_commands = ['lvcreate -L %s -n lv_%s %s --yes' %(size, lvname, vgname),'mkfs.ext3 /dev/%s/lv_%s' %(vgname, lvname),'mount /dev/%s/lv_%s %s' %(vgname, lvname, mountpoint)]
+	lst_commands = ['lvcreate -L %s -n lv_%s %s' %(size, lvname, vgname),'mkfs.ext3 /dev/%s/lv_%s' %(vgname, lvname),'mount -v /dev/%s/lv_%s %s' %(vgname, lvname, mountpoint)]
 	for i in lst_commands:
 		logging.info('%s:RUNNING %s',timestr,i)
 		args = shlex.split(i)
 		subprocess_cmd(args)
 		time.sleep(1)
-		find_and_copy(fsystem, mountpoint, lvname)
+	find_and_copy(fsystem, mountpoint, lvname)
 
 #EXECUTE FIND AND CPIO USING PIPE
 def find_and_copy(fsystem, mountpoint, lvname):
 	logging.info('FINDING THINGS TO COPY.')
 	fileName = '.sb-dump-%s.tmp' %(lvname)
-	with open(fileName, "w+") as f:
-		args = shlex.split('find %s -xdev' %(fsystem))
-		pFind  = subprocess.Popen(args, stdout=f, stderr=subprocess.PIPE)
-		procout, procerr = pFind.communicate()
-		logging.info('%s:%s:%s', timestr,args,procout)
-		errcode = pFind.returncode
-		f.seek(0)
+	f = open(fileName, "w+")
+	args = shlex.split('find %s -xdev' %(fsystem))
+	pFind  = subprocess.Popen(args, stdout=f, stderr=subprocess.PIPE)
+	procout, procerr = pFind.communicate()
+	logging.info('%s:%s:%s', timestr,args,procout)
+	errcode = pFind.returncode
+	f.seek(0)
+	if errcode == 0:
+		logging.info('COPYING THINGS TO TEMPORARY FOLDER...')
+		args = shlex.split('cpio -pvmd /mnt/tmpFs')# %(mountpoint))
+		pCPIO = subprocess.Popen(args, stdin=f, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+		procout, procerr = pCPIO.communicate()
+		logging.info('%s:%s:%s',timestr,args,procout)
+		errcode = pCPIO.returncode
 		if errcode == 0:
-			logging.info('COPYING THINGS TO TEMPORARY FOLDER...')
-			args = shlex.split('cpio -pvmd %s' %(mountpoint))
-			pCPIO = subprocess.Popen(args, stdin=f, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-			procout, procerr = pCPIO.communicate()
-			logging.info('%s:%s:%s',timestr,args,procout)
-			errcode = pCPIO.returncode
-			if errcode == 0:
-				logging.info('%s:SUCCESS',timestr)
-			else:
-				logging.warning('%s:CHECK LOGS',timestr)
-				raise IOError(errcode, procerr)
+			logging.info('%s:SUCCESS',timestr)
 		else:
-			logging.error('%s:%s:%s', timestr,args,procerr.rstrip())
+			logging.warning('%s:CHECK LOGS',timestr)
 			raise IOError(errcode, procerr)
+	else:
+		logging.error('%s:%s:%s', timestr,args,procerr.rstrip())
+		raise IOError(errcode, procerr)
 	f.close()
 
 # EXECUTE OS COMMAND WIHT SHELL=TRUE ENABLED, THIS IS USING A INSECURE OPTION FOR SHELL COMMAND, DON'T USE THIS AS WEB APP
@@ -171,11 +172,11 @@ logging.info('Started')
 confirm_exec(prompt='do you want to proceed? ', retries=3, complaint='yes or no, please!')
 
 #GET GENERAL INFORMATION
-fdev = ask_info(prompt='what device will receive the data? ', retries=3, complaint='enter a valid device (ex: /dev/sdo1!', answer='^/dev.+')
-vgname = ask_info(prompt='what name do you want to user for volume group? ', retries=3, complaint='enter a valid name (ex: vg[whateveryouwant]', answer='^vg.+')
+fdev = ask_info(prompt='what device will receive the data? ', retries=3, complaint='enter a valid device (ex: /dev/sdo1!)', answer='^/dev.+')
+vgname = ask_info(prompt='what name do you want to user for volume group? ', retries=3, complaint='enter a valid name (ex: vg[whateveryouwant)', answer='^vg.+')
 initrd = ask_info(prompt='what is the currently initrd? ', retries=3, complaint='enter a valid initrd name (ex: /boot/initrd-kernelversio.img)', answer='^/boot/initrd.+')
 
-"""
+
 _fhandle = open(check_fs(file_name))
 
 lst_commands = ['vgscan','pvcreate %s'%fdev,'vgcreate %s %s'%(vgname,fdev),'mkdir -v -p /mnt/tmpFs']
@@ -183,27 +184,33 @@ for i in lst_commands:
 	args = shlex.split(i)
 	subprocess_cmd(args)
 
-#for fsystem, size in get_sizing(_fhandle):
-#	if re.search('^/$', fsystem):
-#		create_fs(fsystem,vgname,mountpoint='/mnt/tmpFs',lvname='root')
+for fsystem, size in get_sizing(_fhandle):
+	if re.search('^/$', fsystem):
+		create_fs(fsystem,vgname,mountpoint='/mnt/tmpFs',lvname='root')
 
 _fhandle.seek(0)
 
 for fsystem, size in get_sizing(_fhandle):
 	if re.search('^/$', fsystem): continue
 	lvname = re.findall('[a-z0-9]+$', fsystem)[0]
-	#mountpoint = '/mnt/tmpFs/root/%s' %(lvname)
-	mountpoint = '/mnt/tmpFs'
+	mountpoint = '/mnt/tmpFs%s' %(fsystem)
+	if os.path.isdir('/mnt/tmpFs%s' %(fsystem)) is False:
+		subprocess_cmd(shlex.split('mkdir -vp /mnt/tmpFs%s' %(fsystem)))
+	#mountpoint = '/mnt/tmpFs'
 	create_fs(fsystem, vgname, mountpoint, lvname)
 
 _fhandle.close()
-"""
 
 logging.info('%s:SETTING CURRENT KERNEL VERSION',timestr)
 kernelversion = subprocess_cmd(shlex.split('uname -r'))
 kernelversion = kernelversion[1].rstrip()
 
-lst_commands = ['mkdir -vp /tmp/kill/00','ln -vs %s /boot/initrd-%s.img'%(initrd,kernelversion)]
+
+if os.path.isfile('/boot/initrd-%s.img'%kernelversion) is True:
+	lst_commands = 'mkdir -vp /tmp/kill/00'
+else:
+	lst_commands = ['mkdir -vp /tmp/kill/00','ln -vs %s /boot/initrd-%s.img'%(initrd,kernelversion)]
+
 for i in lst_commands:
 	logging.info('%s:%s',timestr,i)
 	args = shlex.split(i)
