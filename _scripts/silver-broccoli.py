@@ -139,16 +139,7 @@ def subprocess_cmd_SH(command):
 	
 def create_initrd():
 	logging.info('EXECUTING BASH SCRIPT.')
-	p1  = subprocess.Popen('/create-initrd.sh', stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
-	procout, procerr = p1.communicate()
-	logging.info('%s:%s:%s', timestr,args,procout)
-	errcode = p1.returncode
-	if errcode == 0:
-		logging.info('SUCCESS')
-	else:
-		logging.error('%s:%s:%s', timestr,args,procerr.rstrip())
-		#return errcode, procerr
-		raise IOError(errcode, procerr)
+	subprocess_cmd_SH('/create-initrd.sh')
 #---------------------------------------------BEGIN EXECUTION------------------------------------------------------
 
 print """
@@ -176,7 +167,22 @@ fdev = ask_info(prompt='what device will receive the data? ', retries=3, complai
 vgname = ask_info(prompt='what name do you want to user for volume group? ', retries=3, complaint='enter a valid name (ex: vg[whateveryouwant)', answer='^vg.+')
 initrd = ask_info(prompt='what is the currently initrd? ', retries=3, complaint='enter a valid initrd name (ex: /boot/initrd-kernelversio.img)', answer='^/boot/initrd.+')
 
+if not os.path.isfile(initrd):
+	print '\nThe file %s was not found!'%initrd
+	sys.exit()
 
+print """
+
+As informações inseridas foram:
+%s
+%s	
+%s
+Confirme a execução...
+"""%(fdev,vgname,initrd)
+
+confirm_exec(prompt='do you want to proceed? ', retries=3, complaint='yes or no, please!')
+
+"""
 _fhandle = open(check_fs(file_name))
 
 lst_commands = ['vgscan','pvcreate %s'%fdev,'vgcreate %s %s'%(vgname,fdev),'mkdir -v -p /mnt/tmpFs']
@@ -200,22 +206,27 @@ for fsystem, size in get_sizing(_fhandle):
 	create_fs(fsystem, vgname, mountpoint, lvname)
 
 _fhandle.close()
-
+"""
 logging.info('%s:SETTING CURRENT KERNEL VERSION',timestr)
+print 'Verificando a versão do kernel'
 kernelversion = subprocess_cmd(shlex.split('uname -r'))
 kernelversion = kernelversion[1].rstrip()
 
 
 if os.path.isfile('/boot/initrd-%s.img'%kernelversion) is True:
-	lst_commands = 'mkdir -vp /tmp/kill/00'
-else:
-	lst_commands = ['mkdir -vp /tmp/kill/00','ln -vs %s /boot/initrd-%s.img'%(initrd,kernelversion)]
-
-for i in lst_commands:
-	logging.info('%s:%s',timestr,i)
-	args = shlex.split(i)
+	print 'Criando /tmp/kill/00'
+	args = shlex.split('mkdir -vp /tmp/kill/00')
+	logging.info('%s:%s',timestr,args)
 	subprocess_cmd(args)
+else:
+	print 'Criando /tmp/kill/00 e link simbolico para initrd'
+	lst_commands = ['mkdir -vp /tmp/kill/00','ln -vs %s /boot/initrd-%s.img'%(initrd,kernelversion)]
+	for i in lst_commands:
+		logging.info('%s:%s',timestr,i)
+		args = shlex.split(i)
+		subprocess_cmd(args)
 
+print 'Verificando existencia de lvm no initrd atual'
 command = 'cd /tmp/kill/00 && gunzip < %s | cpio -vid'%(initrd)
 logging.info('%s:%s',timestr,command)
 subprocess_cmd_SH(command)
@@ -227,28 +238,29 @@ logging.info('%s:%s:%s',timestr,args,procout)
 errcode = process.returncode
 
 if errcode == 0:
-	logging.info('%s:SUCCESS:LVM BIN WAS FOUND.',timestr)
-	print 'vi /mnt/root/fstab'
-	print 'vi /boot/grub.conf'
+	logging.info('%s:LVM BIN WAS FOUND.',timestr)
+	print 'Altere o /mnt/tmpFs/etc/fstab para as particoes que estao como lvm.'
+	print 'Altere o /boot/grub.conf para a particao root utilizando lvm.'
 else:
-	logging.info('%s:ERROR:LVM BIN WAS NOT FOUND, RUNNING COMMANDS TO CREATE.',timestr)
-	#create_initrd()	
+	logging.warning('%s:LVM BIN WAS NOT FOUND, RUNNING COMMANDS TO CREATE.',timestr)
 	
-	command = 'chroot /mnt/tmpFs && mount -t proc /proc /proc && mount -t sysfs /sys /sys && mount -B /dev /dev && vgmknodes -v && mkinitrd -v /boot/initrd-%s-lvm.img %s ; exit'%(kernelversion,kernelversion)
-	subprocess_cmd_SH(command)
-	#print 'chroot /mnt'
-	#print 'mount -t proc /proc /proc'
-	#print 'mount -t sysfs /sys /sys'
-	#print 'mount -bind /dev'
-	#print 'vgmknodes -v'
-	#print 'mkinitrd -v /boot/initrd-$(uname -r)-lvm.img uname -r'
-	#exit
-	print 'vi /mnt/root/fstab'
-	print 'vi /boot/grub.conf'
+	print """
+Execute o script /create-initrd.sh
+Os comandos que devem ser executados são:
+chroot /mnt/tmpFs
+mount -t proc /proc /proc
+mount -t sysfs /sys /sys
+mount --bind /dev /dev
+vgmknodes -v
+mkinitrd -v /boot/initrd-$(uname -r)-lvm.img $(uname -r)
+exit
+"""
+	print 'Altere o /mnt/tmpFs/etc/fstab para as particoes que estao como lvm.'
+	print 'Altere o /boot/grub.conf para a particao root utilizando lvm e altere o initrd para %s'%(kernelversion)
 
 
-
-print """*** PARA FINALIZAR A ATIVIDADE EFETUE AS AÇÕES ABAIXO ***
+print """
+PARA ENCERRAR EFETUE AS AÇÕES ABAIXO:
 1. Reinicie a máquina e valida se a atividade foi concluída com sucesso
 2. Reinstalar VMtools
 3. Remover serviços e módulos desnecessários

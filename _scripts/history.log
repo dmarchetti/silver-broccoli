@@ -1,0 +1,1000 @@
+    5  (08:04:21 - 06/07/2016 - root ) -> less ../logs/IntroscopeEnterpriseManager.log
+    6  (09:25:46 - 12/07/2016 - root ) -> ll
+    7  (09:26:16 - 12/07/2016 - root ) -> cd /opt/introscope/coletor7/9.7.0/bin/
+    8  (09:26:16 - 12/07/2016 - root ) -> ll
+    9  (09:26:51 - 12/07/2016 - root ) -> ./EMCtrl.sh stop
+   10  (09:26:56 - 12/07/2016 - root ) -> ./EMCtrl.sh start
+   11  (09:27:07 - 12/07/2016 - root ) -> less ../logs/IntroscopeEnterpriseManager
+   12  (09:27:09 - 12/07/2016 - root ) -> less ../logs/IntroscopeEnterpriseManager.log
+   13  (15:18:32 - 12/07/2016 - root ) -> clear
+   14  (15:18:40 - 12/07/2016 - root ) -> tail /etc/fstab/
+   15  (15:18:51 - 12/07/2016 - root ) -> tail /etc/fstab
+   16  (15:18:55 - 12/07/2016 - root ) -> clear
+   17  (15:18:57 - 12/07/2016 - root ) -> echo "//pfs01/ti/Operacoes_TI/Gestao\040de\040Ferramentas/Checklist/APM/    /mnt/checklist   cifs  _netdev,username=P0622357,password=ndonth73,dir_mode=0755,file_mode=0755,uid=500,gid=500 0 0" >> /etc/fstab
+   18  (15:19:04 - 12/07/2016 - root ) -> clear
+   19  (15:19:08 - 12/07/2016 - root ) -> ls -lrth /etc/fstab
+   20  (15:20:02 - 12/07/2016 - root ) -> clear
+   21  (15:20:42 - 12/07/2016 - root ) -> clear
+   22  (15:20:47 - 12/07/2016 - root ) -> tail -n 1 /etc/fstab
+   23  (14:36:09 - 14/07/2016 - root ) -> cd /opt/introscope/coletor7/9.7.0/bin/
+   24  (14:36:10 - 14/07/2016 - root ) -> ll
+   25  (14:36:26 - 14/07/2016 - root ) -> ./EMCtrl.sh stop
+   26  (14:37:36 - 14/07/2016 - root ) -> ./EMCtrl.sh start
+   27  (14:37:40 - 14/07/2016 - root ) -> less ../logs/IntroscopeEnterpriseManager.log
+   28  (10:24:53 - 04/08/2016 - root ) -> clear
+   29  (10:25:02 - 04/08/2016 - root ) -> cd /opt/introscope
+   30  (10:25:04 - 04/08/2016 - root ) -> ll
+   31  (11:21:32 - 04/08/2016 - root ) -> cd /opt/introscope/installers10.2/
+   32  (11:21:33 - 04/08/2016 - root ) -> ll
+   33  (11:21:37 - 04/08/2016 - root ) -> rm -rf Fix_CA/
+   34  (11:21:38 - 04/08/2016 - root ) -> ll
+   35  (11:57:12 - 04/08/2016 - root ) -> clear
+   36  (11:57:17 - 04/08/2016 - root ) -> df -h
+   37  (11:58:24 - 04/08/2016 - root ) -> clear
+   38  (11:58:26 - 04/08/2016 - root ) -> clear
+   39  (11:58:28 - 04/08/2016 - root ) -> d f-h
+   40  (11:58:32 - 04/08/2016 - root ) -> clear
+   41  (11:58:33 - 04/08/2016 - root ) -> df -h
+   42  (11:58:44 - 04/08/2016 - root ) -> df -h
+   43  (12:01:16 - 04/08/2016 - root ) -> cd /opt/introscope/coletor7/
+   44  (12:01:17 - 04/08/2016 - root ) -> ll
+   45  (12:01:22 - 04/08/2016 - root ) -> mkdir 10.2
+   46  (12:01:23 - 04/08/2016 - root ) -> ll
+   47  (12:01:28 - 04/08/2016 - root ) -> ll
+   48  (12:01:34 - 04/08/2016 - root ) -> cd TESTE_PURGE/
+   49  (12:01:34 - 04/08/2016 - root ) -> ll
+   50  (12:01:37 - 04/08/2016 - root ) -> cd ..
+   51  (12:01:38 - 04/08/2016 - root ) -> ll
+   52  (12:01:44 - 04/08/2016 - root ) -> cd TESTE_PURGE/
+   53  (12:01:44 - 04/08/2016 - root ) -> ll
+   54  (12:01:48 - 04/08/2016 - root ) -> cd data-new/
+   55  (12:01:49 - 04/08/2016 - root ) -> ll
+   56  (12:01:51 - 04/08/2016 - root ) -> ll
+   57  (12:01:52 - 04/08/2016 - root ) -> cd ..
+   58  (12:01:52 - 04/08/2016 - root ) -> lll
+   59  (12:01:53 - 04/08/2016 - root ) -> ll
+   60  (12:01:59 - 04/08/2016 - root ) -> du -sh *
+   61  (12:02:03 - 04/08/2016 - root ) -> rm -rf data-new/
+   62  (12:02:24 - 04/08/2016 - root ) -> ll
+   63  (12:02:25 - 04/08/2016 - root ) -> cd ..
+   64  (12:02:25 - 04/08/2016 - root ) -> ll
+   65  (12:02:35 - 04/08/2016 - root ) -> ll
+   66  (12:02:36 - 04/08/2016 - root ) -> cd ..
+   67  (12:02:37 - 04/08/2016 - root ) -> ll
+   68  (12:02:39 - 04/08/2016 - root ) -> cd coletor8/
+   69  (12:02:39 - 04/08/2016 - root ) -> ll
+   70  (12:02:42 - 04/08/2016 - root ) -> mkdir 10.2
+   71  (12:02:43 - 04/08/2016 - root ) -> ll
+   72  (12:02:44 - 04/08/2016 - root ) -> cd ..
+   73  (12:02:45 - 04/08/2016 - root ) -> ll
+   74  (12:02:49 - 04/08/2016 - root ) -> cd introscope9.7.0.27linuxAMD64/
+   75  (12:02:50 - 04/08/2016 - root ) -> ll
+   76  (12:02:52 - 04/08/2016 - root ) -> cd ..
+   77  (12:02:52 - 04/08/2016 - root ) -> ll
+   78  (12:02:57 - 04/08/2016 - root ) -> rm -rf introscope9.7.0.27linuxAMD64/
+   79  (12:02:59 - 04/08/2016 - root ) -> ll
+   80  (12:03:01 - 04/08/2016 - root ) -> cd ..
+   81  (12:03:02 - 04/08/2016 - root ) -> ll
+   82  (12:03:31 - 04/08/2016 - root ) -> ll
+   83  (12:03:36 - 04/08/2016 - root ) -> cd introscope/
+   84  (12:03:37 - 04/08/2016 - root ) -> ll
+   85  (12:03:38 - 04/08/2016 - root ) -> cd ..
+   86  (12:03:39 - 04/08/2016 - root ) -> ll
+   87  (12:03:43 - 04/08/2016 - root ) -> ll
+   88  (16:21:38 - 04/08/2016 - root ) -> ll
+   89  (16:21:53 - 04/08/2016 - root ) -> cd /opt/introscope/installers10.2/
+   90  (16:21:54 - 04/08/2016 - root ) -> ll
+   91  (16:22:00 - 04/08/2016 - root ) -> tar -xvf introscope10.2.0.27linuxAMD64.tar 
+   92  (16:23:47 - 04/08/2016 - root ) -> ll
+   93  (16:23:49 - 04/08/2016 - root ) -> ./introscope10.2.0.27linuxAMD64.bin 
+   94  (16:27:43 - 04/08/2016 - root ) -> ./introscope10.2.0.27linuxAMD64.bin 
+   95  (16:32:44 - 04/08/2016 - root ) -> ls -lrth /opt/introscope/coletor8/10.2/
+   96  (16:32:47 - 04/08/2016 - root ) -> ls -lrth /opt/introscope/coletor7/10.2/
+   97  (16:32:50 - 04/08/2016 - root ) -> ll
+   98  (19:53:02 - 04/08/2016 - root ) -> ll
+   99  (19:53:08 - 04/08/2016 - root ) -> cd /opt/introscope/coletor7/9.7.0/bin/
+  100  (19:53:09 - 04/08/2016 - root ) -> ll
+  101  (19:53:15 - 04/08/2016 - root ) -> ./EMCtrl.sh stop
+  102  (19:53:57 - 04/08/2016 - root ) -> cd /opt/introscope/coletor8/9.7.0/bin/
+  103  (19:53:57 - 04/08/2016 - root ) -> ll
+  104  (19:53:59 - 04/08/2016 - root ) -> ./EMCtrl.sh status
+  105  (19:54:02 - 04/08/2016 - root ) -> ./EMCtrl.sh stop
+  106  (19:56:07 - 04/08/2016 - root ) -> less teste_instancecounts.txt.new 
+  107  (19:56:15 - 04/08/2016 - root ) -> ps aux | grep -i java
+  108  (20:03:16 - 04/08/2016 - root ) -> cd /opt/introscope/coletor7/9.7.0/
+  109  (20:03:16 - 04/08/2016 - root ) -> ll
+  110  (20:04:25 - 04/08/2016 - root ) -> cp -pr data/ ../10.2/
+  111  (20:25:16 - 04/08/2016 - root ) -> pwd
+  112  (20:25:17 - 04/08/2016 - root ) -> cd ..
+  113  (20:25:18 - 04/08/2016 - root ) -> ll
+  114  (20:25:21 - 04/08/2016 - root ) -> cd ..
+  115  (20:25:21 - 04/08/2016 - root ) -> ll
+  116  (20:25:31 - 04/08/2016 - root ) -> cd coletor8/9.7.0/
+  117  (20:25:31 - 04/08/2016 - root ) -> ll
+  118  (20:25:35 - 04/08/2016 - root ) -> cp -pr data/ ../10.2/
+  119  (20:37:33 - 04/08/2016 - root ) -> ll
+  120  (20:37:41 - 04/08/2016 - root ) -> pws
+  121  (20:37:43 - 04/08/2016 - root ) -> pwd
+  122  (20:37:47 - 04/08/2016 - root ) -> cd ../10.2/
+  123  (20:37:48 - 04/08/2016 - root ) -> ll
+  124  (20:40:33 - 04/08/2016 - root ) -> ll
+  125  (22:31:32 - 04/08/2016 - root ) -> ll
+  126  (22:31:34 - 04/08/2016 - root ) -> df -h
+  127  (22:35:10 - 04/08/2016 - root ) -> cd/
+  128  (22:35:11 - 04/08/2016 - root ) -> cd /
+  129  (22:36:24 - 04/08/2016 - root ) -> cp -pr /opt/introscope/data7/data/ /opt/introscope/data7/data_bkp/
+  130  (22:51:56 - 04/08/2016 - root ) -> cp -pr /opt/introscope/data8/data/ /opt/introscope/data8/data_bkp/
+  131  (23:17:53 - 04/08/2016 - root ) -> df -h
+  132  (23:18:04 - 04/08/2016 - root ) -> cd /opt/introscope/data7/data
+  133  (23:18:04 - 04/08/2016 - root ) -> ll
+  134  (23:18:09 - 04/08/2016 - root ) -> rm baselines.db 
+  135  (23:18:12 - 04/08/2016 - root ) -> ll
+  136  (23:18:14 - 04/08/2016 - root ) -> df -h
+  137  (23:19:50 - 04/08/2016 - root ) -> ll
+  138  (23:20:01 - 04/08/2016 - root ) -> cd /opt/introscope/coletor7/10.2/
+  139  (23:20:02 - 04/08/2016 - root ) -> ll
+  140  (23:20:05 - 04/08/2016 - root ) -> cd config/
+  141  (23:20:05 - 04/08/2016 - root ) -> ll
+  142  (23:20:08 - 04/08/2016 - root ) -> vi IntroscopeEnterpriseManager.properties 
+  143  (23:42:35 - 04/08/2016 - root ) -> ll
+  144  (23:42:40 - 04/08/2016 - root ) -> ll
+  145  (23:46:18 - 04/08/2016 - root ) -> df -h
+  146  (23:46:30 - 04/08/2016 - root ) -> cd /opt/introscope/data7/data
+  147  (23:46:31 - 04/08/2016 - root ) -> ll
+  148  (23:46:35 - 04/08/2016 - root ) -> cd ..
+  149  (23:46:35 - 04/08/2016 - root ) -> ll
+  150  (23:46:38 - 04/08/2016 - root ) -> cd data_bkp/
+  151  (23:46:39 - 04/08/2016 - root ) -> ll
+  152  (23:46:43 - 04/08/2016 - root ) -> rm baselines.db 
+  153  (23:46:46 - 04/08/2016 - root ) -> ll
+  154  (23:46:50 - 04/08/2016 - root ) -> cd ..
+  155  (23:46:50 - 04/08/2016 - root ) -> ll
+  156  (23:46:52 - 04/08/2016 - root ) -> df -h
+  157  (23:46:59 - 04/08/2016 - root ) -> ll
+  158  (23:47:07 - 04/08/2016 - root ) -> mv data_bkp/ /opt/introscope/coletor7/
+  159  (00:18:15 - 05/08/2016 - root ) -> vi /opt/introscope/coletor7/10.2/config/IntroscopeEnterpriseManager.properties
+  160  (00:19:41 - 05/08/2016 - root ) -> vi /opt/introscope/coletor7/10.2/config/IntroscopeEnterpriseManager.properties
+  161  (00:21:16 - 05/08/2016 - root ) -> vi /opt/introscope/coletor7/10.2/config/IntroscopeEnterpriseManager.properties
+  162  (00:23:11 - 05/08/2016 - root ) -> vi /opt/introscope/coletor8/10.2/config/IntroscopeEnterpriseManager.properties
+  163  (00:24:22 - 05/08/2016 - root ) -> vi /opt/introscope/coletor8/10.2/config/IntroscopeEnterpriseManager.properties
+  164  (00:56:44 - 05/08/2016 - root ) -> ll
+  165  (00:57:13 - 05/08/2016 - root ) -> mv /opt/introscope/coletor7/9.7.0/traces /opt/introscope/coletor7/10.2/
+  166  (00:57:19 - 05/08/2016 - root ) -> mv /opt/introscope/coletor8/9.7.0/traces /opt/introscope/coletor8/10.2/
+  167  (00:57:21 - 05/08/2016 - root ) -> ll
+  168  (23:39:21 - 04/08/2016 - root ) -> cd /opt/introscope/coletor7/10.2/data/baselines.db /opt/introscope/data7/data
+  169  (23:39:45 - 04/08/2016 - root ) -> cd /opt/introscope/coletor7/10.2/data/
+  170  (23:39:47 - 04/08/2016 - root ) -> ll
+  171  (23:39:54 - 04/08/2016 - root ) -> df -h
+  172  (23:40:06 - 04/08/2016 - root ) -> cd /
+  173  (23:40:11 - 04/08/2016 - root ) -> cd opt/introscope/data7/
+  174  (23:40:12 - 04/08/2016 - root ) -> ll
+  175  (23:40:31 - 04/08/2016 - root ) -> cd /opt/introscope/coletor7/10.2/data/baselines.db /opt/introscope/data7/data
+  176  (23:40:42 - 04/08/2016 - root ) -> cd /opt/introscope/coletor7/10.2/data
+  177  (23:40:45 - 04/08/2016 - root ) -> ll
+  178  (23:41:42 - 04/08/2016 - root ) -> cp -pr /opt/introscope/coletor7/10.2/data/baselines.db /opt/introscope/data7/data
+  179  (23:50:18 - 04/08/2016 - root ) -> cd /
+  180  (23:50:31 - 04/08/2016 - root ) -> cd /opt/introscope/data7/data
+  181  (23:50:32 - 04/08/2016 - root ) -> ll]
+  182  (23:50:34 - 04/08/2016 - root ) -> ll
+  183  (23:51:06 - 04/08/2016 - root ) -> rm baselines.db
+  184  (23:51:18 - 04/08/2016 - root ) -> ll
+  185  (23:51:23 - 04/08/2016 - root ) -> cd /
+  186  (23:57:38 - 04/08/2016 - root ) -> cp -pr /opt/introscope/coletor7/10.2/data/baselines.db /opt/introscope/data7/data
+  187  (00:03:33 - 05/08/2016 - root ) -> cd /
+  188  (00:03:40 - 05/08/2016 - root ) -> cd li791
+  189  (00:03:48 - 05/08/2016 - root ) -> ssh li791
+  190  (02:32:06 - 05/08/2016 - root ) -> cd /opt/introscope/coletor7/10.2/bin/
+  191  (02:32:09 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  192  (02:32:13 - 05/08/2016 - root ) -> ./EMCtrl.sh start
+  193  (02:32:21 - 05/08/2016 - root ) -> cd ..
+  194  (02:32:23 - 05/08/2016 - root ) -> cd ..
+  195  (02:32:25 - 05/08/2016 - root ) -> cd ..
+  196  (02:32:31 - 05/08/2016 - root ) -> cd coletor8/10.2/bin/
+  197  (02:32:36 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  198  (02:32:40 - 05/08/2016 - root ) -> ./EMCtrl.sh start
+  199  (02:45:35 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  200  (02:45:42 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  201  (02:45:46 - 05/08/2016 - root ) -> cd ..
+  202  (02:45:48 - 05/08/2016 - root ) -> cd ..
+  203  (02:45:50 - 05/08/2016 - root ) -> cd ..
+  204  (02:46:00 - 05/08/2016 - root ) -> cd coletor7/
+  205  (02:46:09 - 05/08/2016 - root ) -> cd 10.2/config/
+  206  (02:46:13 - 05/08/2016 - root ) -> cd ..
+  207  (02:46:16 - 05/08/2016 - root ) -> cd bin
+  208  (02:46:19 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  209  (02:46:23 - 05/08/2016 - root ) -> cd ..
+  210  (02:46:26 - 05/08/2016 - root ) -> cd config/
+  211  (02:46:32 - 05/08/2016 - root ) -> vi IntroscopeEnterpriseManager.properties 
+  212  (02:47:14 - 05/08/2016 - root ) -> cd ..
+  213  (02:47:35 - 05/08/2016 - root ) -> cd bin/
+  214  (02:47:42 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  215  (02:47:45 - 05/08/2016 - root ) -> ./EMCtrl.sh start
+  216  (02:47:57 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  217  (02:47:58 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  218  (02:47:59 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  219  (02:47:59 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  220  (02:48:00 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  221  (02:48:00 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  222  (02:48:00 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  223  (02:48:00 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  224  (02:48:01 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  225  (02:48:01 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  226  (02:48:01 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  227  (02:48:02 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  228  (02:48:02 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  229  (02:48:02 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  230  (02:48:02 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  231  (02:48:03 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  232  (02:48:03 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  233  (02:48:03 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  234  (02:48:03 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  235  (02:48:04 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  236  (02:48:04 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  237  (02:48:04 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  238  (02:48:04 - 05/08/2016 - root ) -> ./EMCtrl.sh status
+  239  (12:53:01 - 05/08/2016 - root ) -> cd /opt/introscope/coletor7/10.2/logs/
+  240  (12:53:04 - 05/08/2016 - root ) -> less IntroscopeEnterpriseManager.log 
+  241  (12:53:19 - 05/08/2016 - root ) -> ll
+  242  (12:53:24 - 05/08/2016 - root ) -> ll
+  243  (12:53:25 - 05/08/2016 - root ) -> cd ..
+  244  (12:53:25 - 05/08/2016 - root ) -> ll
+  245  (12:53:27 - 05/08/2016 - root ) -> cd config/
+  246  (12:53:27 - 05/08/2016 - root ) -> ll
+  247  (12:53:30 - 05/08/2016 - root ) -> vi apm-
+  248  (12:53:33 - 05/08/2016 - root ) -> vi apm-events-thresholds-config.xml 
+  249  (12:53:54 - 05/08/2016 - root ) -> less ../logs/IntroscopeEnterpriseManager.log 
+  250  (15:53:52 - 05/08/2016 - root ) -> ll
+  251  (15:53:55 - 05/08/2016 - root ) -> vi apm-events-thresholds-config.xml 
+  252  (15:54:09 - 05/08/2016 - root ) -> less ../logs/IntroscopeEnterpriseManager.log 
+  253  (09:47:49 - 08/08/2016 - root ) -> ll
+  254  (09:47:54 - 08/08/2016 - root ) -> cd /opt/introscope/
+  255  (09:47:55 - 08/08/2016 - root ) -> df -h
+  256  (09:48:07 - 08/08/2016 - root ) -> cd /opt/introscope/coletor7/9.7.0/data/
+  257  (09:48:07 - 08/08/2016 - root ) -> ll
+  258  (09:48:10 - 08/08/2016 - root ) -> du -sh *
+  259  (09:48:19 - 08/08/2016 - root ) -> rm -rf 14140*
+  260  (09:48:26 - 08/08/2016 - root ) -> rm -rf archive/
+  261  (09:48:42 - 08/08/2016 - root ) -> du -sh *
+  262  (09:48:47 - 08/08/2016 - root ) -> rm -rf metrics.*
+  263  (09:48:50 - 08/08/2016 - root ) -> ll
+  264  (09:48:52 - 08/08/2016 - root ) -> df -h
+  265  (09:48:56 - 08/08/2016 - root ) -> pwd
+  266  (09:49:02 - 08/08/2016 - root ) -> cd /opt/introscope/coletor8/9.7.0/data
+  267  (09:49:03 - 08/08/2016 - root ) -> ll
+  268  (09:49:13 - 08/08/2016 - root ) -> rm -rf 14140* archive/ metrics.*
+  269  (09:49:38 - 08/08/2016 - root ) -> ll
+  270  (09:49:40 - 08/08/2016 - root ) -> d f-h
+  271  (09:49:41 - 08/08/2016 - root ) -> df -h
+  272  (15:48:19 - 08/08/2016 - root ) -> cd /opt/introscope/coletor7/10.2/config/
+  273  (15:48:22 - 08/08/2016 - root ) -> vi apm-we
+  274  (15:48:24 - 08/08/2016 - root ) -> vi apm-events-thresholds-config.xml 
+  275  (15:48:40 - 08/08/2016 - root ) -> less ../logs/IntroscopeEnterpriseManager.log 
+  276  (16:09:01 - 08/08/2016 - root ) -> vi apm-events-thresholds-config.xml 
+  277  (09:33:09 - 09/08/2016 - root ) -> def h
+  278  (09:33:11 - 09/08/2016 - root ) -> df -h
+  279  (09:33:28 - 09/08/2016 - root ) -> mkdir /opt/introscope/coletor7/10.2/logs/export-logs
+  280  (09:33:31 - 09/08/2016 - root ) -> mkdir /opt/introscope/coletor8/10.2/logs/export-logs
+  281  (09:53:13 - 09/08/2016 - root ) -> vi /etc/mtab 
+  282  (09:53:23 - 09/08/2016 - root ) -> umount /mnt/checklist 
+  283  (09:53:25 - 09/08/2016 - root ) -> vi /etc/mtab 
+  284  (09:53:30 - 09/08/2016 - root ) -> vi /etc/fstab
+  285  (09:53:38 - 09/08/2016 - root ) -> mount -t cifs "//pfs01/ti/Operacoes_TI/Gestao de Ferramentas/Checklist/APM/" -o username=P0622357,password=mlktot73 /mnt/checklist/
+  286  (09:53:42 - 09/08/2016 - root ) -> ls -lrth /mnt/checklist/
+  287  (10:48:25 - 09/08/2016 - root ) -> cd /opt/introscope/coletor7/10.2/config/
+  288  (10:48:27 - 09/08/2016 - root ) -> vi apm-events-thresholds-config.xml 
+  289  (10:48:44 - 09/08/2016 - root ) -> less ../logs/IntroscopeEnterpriseManager.log 
+  290  (14:42:35 - 09/08/2016 - root ) -> cd /opt/introscope/
+  291  (14:42:36 - 09/08/2016 - root ) -> df -h
+  292  (14:42:43 - 09/08/2016 - root ) -> cd /opt/introscope/data7
+  293  (14:42:43 - 09/08/2016 - root ) -> ll
+  294  (14:42:48 - 09/08/2016 - root ) -> du -sh *
+  295  (14:42:52 - 09/08/2016 - root ) -> cd test/
+  296  (14:42:53 - 09/08/2016 - root ) -> ll
+  297  (14:42:59 - 09/08/2016 - root ) -> cd da
+  298  (14:43:00 - 09/08/2016 - root ) -> ll
+  299  (14:43:02 - 09/08/2016 - root ) -> cd ../data/
+  300  (14:43:02 - 09/08/2016 - root ) -> ll
+  301  (14:43:04 - 09/08/2016 - root ) -> du -sh *
+  302  (14:47:19 - 09/08/2016 - root ) -> df -h
+  303  (15:06:16 - 09/08/2016 - root ) -> df -h
+  304  (15:07:14 - 09/08/2016 - root ) -> cd /opt/introscope/data7/
+  305  (15:07:15 - 09/08/2016 - root ) -> ll
+  306  (15:07:25 - 09/08/2016 - root ) -> de test/
+  307  (15:07:26 - 09/08/2016 - root ) -> ll
+  308  (15:07:38 - 09/08/2016 - root ) -> cd test/
+  309  (15:07:39 - 09/08/2016 - root ) -> ll
+  310  (15:07:47 - 09/08/2016 - root ) -> cd ..
+  311  (15:07:53 - 09/08/2016 - root ) -> cd lista
+  312  (15:07:54 - 09/08/2016 - root ) -> ll
+  313  (15:08:02 - 09/08/2016 - root ) -> cd lista
+  314  (15:34:29 - 09/08/2016 - root ) -> cd /opt/introscope/coletor7/10.2/config/
+  315  (15:34:30 - 09/08/2016 - root ) -> ll
+  316  (15:34:33 - 09/08/2016 - root ) -> vi apm-events-thresholds-config.xml 
+  317  (15:34:45 - 09/08/2016 - root ) -> less ../logs/IntroscopeEnterpriseManager.log 
+  318  (15:47:00 - 09/08/2016 - root ) -> ll
+  319  (15:47:03 - 09/08/2016 - root ) -> vi apm-events-thresholds-config.xml 
+  320  (15:47:12 - 09/08/2016 - root ) -> less ../logs/IntroscopeEnterpriseManager.log 
+  321  (10:16:00 - 16/08/2016 - root ) -> cd /opt/introscope/coletor8/10.2/bin/
+  322  (10:16:00 - 16/08/2016 - root ) -> ll
+  323  (10:16:04 - 16/08/2016 - root ) -> ./EMCtrl.sh status
+  324  (10:16:05 - 16/08/2016 - root ) -> ./EMCtrl.sh stop
+  325  (10:16:55 - 16/08/2016 - root ) -> ./EMCtrl.sh start
+  326  (10:17:18 - 16/08/2016 - root ) -> less ../logs/IntroscopeEnterpriseManager.log 
+  327  (10:38:01 - 16/08/2016 - root ) -> ll
+  328  (10:38:58 - 16/08/2016 - root ) -> ll
+  329  (10:40:00 - 16/08/2016 - root ) -> time
+  330  (10:40:03 - 16/08/2016 - root ) -> date
+  331  (10:40:10 - 16/08/2016 - root ) -> date
+  332  (10:40:12 - 16/08/2016 - root ) -> date
+  333  (10:40:13 - 16/08/2016 - root ) -> date
+  334  (10:40:15 - 16/08/2016 - root ) -> date
+  335  (10:40:16 - 16/08/2016 - root ) -> date
+  336  (10:43:04 - 16/08/2016 - root ) -> date
+  337  (14:43:29 - 19/08/2016 - root ) -> cd /opt/introscope/coletor8/10.2/bin/
+  338  (14:43:30 - 19/08/2016 - root ) -> ll
+  339  (14:43:34 - 19/08/2016 - root ) -> ./EMCtrl.sh sto
+  340  (14:43:35 - 19/08/2016 - root ) -> ./EMCtrl.sh stop
+  341  (14:43:53 - 19/08/2016 - root ) -> ll
+  342  (14:43:59 - 19/08/2016 - root ) -> ./EMCtrl.sh start
+  343  (14:44:03 - 19/08/2016 - root ) -> less ../logs/IntroscopeEnterpriseManager.log 
+  344  (10:23:27 - 30/08/2016 - root ) -> ifconfig -a
+  345  (10:23:41 - 30/08/2016 - root ) -> exit
+  346  (14:28:34 - 08/09/2016 - root ) -> df -h
+  347  (14:30:23 - 08/09/2016 - root ) -> iostat 
+  348  (14:30:50 - 08/09/2016 - root ) -> iostat 
+  349  (14:30:52 - 08/09/2016 - root ) -> iostat 
+  350  (14:30:52 - 08/09/2016 - root ) -> iostat 
+  351  (15:44:31 - 14/09/2016 - root ) -> clear
+  352  (15:45:09 - 14/09/2016 - root ) -> crontab -e
+  353  (15:52:43 - 14/09/2016 - root ) -> exit
+  354  (19:59:14 - 16/09/2016 - root ) -> top]
+  355  (19:59:16 - 16/09/2016 - root ) -> top
+  356  (19:59:52 - 16/09/2016 - root ) -> df -h
+  357  (20:03:31 - 16/09/2016 - root ) -> cd /opt/introscope/coletor7/10.2/bin/
+  358  (20:03:35 - 16/09/2016 - root ) -> ./EMCtrl.sh status
+  359  (20:03:38 - 16/09/2016 - root ) -> ./EMCtrl.sh stop
+  360  (20:03:59 - 16/09/2016 - root ) -> cd ../../../coletor8/10.2/bin/
+  361  (20:04:02 - 16/09/2016 - root ) -> ./EMCtrl.sh status
+  362  (20:04:06 - 16/09/2016 - root ) -> ./EMCtrl.sh stop
+  363  (20:50:56 - 16/09/2016 - root ) -> ifconfig
+  364  (20:52:05 - 16/09/2016 - root ) -> cat /etc/sysconfig/network-scripts/ifcfg-eth0
+  365  (20:52:10 - 16/09/2016 - root ) -> cat /etc/sysconfig/network-scripts/ifcfg-eth1
+  366  (20:52:12 - 16/09/2016 - root ) -> cat /etc/sysconfig/network-scripts/ifcfg-eth2
+  367  (20:52:17 - 16/09/2016 - root ) -> cat /etc/sysconfig/network-scripts/ifcfg-eth3
+  368  (20:52:19 - 16/09/2016 - root ) -> cat /etc/sysconfig/network-scripts/ifcfg-eth4
+  369  (20:52:20 - 16/09/2016 - root ) -> cat /etc/sysconfig/network-scripts/ifcfg-eth5
+  370  (20:52:23 - 16/09/2016 - root ) -> cat /etc/sysconfig/network-scripts/ifcfg-
+  371  (20:52:28 - 16/09/2016 - root ) -> cat /etc/sysconfig/network-scripts/ifcfg-eth0
+  372  (20:52:37 - 16/09/2016 - root ) -> cat /etc/sysconfig/network-scripts/ifcfg-bond1
+  373  (20:53:03 - 16/09/2016 - root ) -> cat /etc/sysconfig/network-scripts/ifcfg-eth0
+  374  (20:53:05 - 16/09/2016 - root ) -> cat /etc/sysconfig/network-scripts/ifcfg-eth1
+  375  (20:53:09 - 16/09/2016 - root ) -> cat /etc/sysconfig/network-scripts/ifcfg-eth0
+  376  (20:53:13 - 16/09/2016 - root ) -> cat /etc/sysconfig/network-scripts/ifcfg-bond1
+  377  (20:54:25 - 16/09/2016 - root ) -> cat /etc/sysconfig/network-scripts/ifcfg-eth0
+  378  (20:54:33 - 16/09/2016 - root ) -> cat /etc/sysconfig/network-scripts/ifcfg-bond0
+  379  (20:54:36 - 16/09/2016 - root ) -> cat /etc/sysconfig/network-scripts/ifcfg-eth1
+  380  (20:56:16 - 16/09/2016 - root ) -> cat /etc/sysconfig/network-scripts/ifcfg-eth2
+  381  (20:56:21 - 16/09/2016 - root ) -> cat /etc/sysconfig/network-scripts/ifcfg-eth3
+  382  (20:56:23 - 16/09/2016 - root ) -> cat /etc/sysconfig/network-scripts/ifcfg-eth4
+  383  (20:56:28 - 16/09/2016 - root ) -> cat /etc/sysconfig/network-scripts/ifcfg-eth5
+  384  (23:20:10 - 16/09/2016 - root ) -> ifconfig
+  385  (04:52:25 - 17/09/2016 - root ) -> cat /boot/grub/grub.conf 
+  386  (04:52:33 - 17/09/2016 - root ) -> vi /boot/grub/grub.conf 
+  387  (04:52:56 - 17/09/2016 - root ) -> pvs
+  388  (04:53:07 - 17/09/2016 - root ) -> lvs
+  389  (04:53:36 - 17/09/2016 - root ) -> df -h
+  390  (04:53:50 - 17/09/2016 - root ) -> vi /etc/fstab
+  391  (05:07:31 - 17/09/2016 - root ) -> exit
+  392  (10:04:58 - 17/09/2016 - root ) -> cd /mnt
+  393  (10:05:53 - 17/09/2016 - root ) -> mount /dev/cdrom /mnt/
+  394  (10:06:02 - 17/09/2016 - root ) -> ls
+  395  (10:06:10 - 17/09/2016 - root ) -> ls checklist/
+  396  (10:06:20 - 17/09/2016 - root ) -> pwd
+  397  (10:06:22 - 17/09/2016 - root ) -> mkdir cdrom
+  398  (10:06:34 - 17/09/2016 - root ) -> ls
+  399  (10:06:40 - 17/09/2016 - root ) -> mount /dev/cdrom cdrom
+  400  (10:06:43 - 17/09/2016 - root ) -> ls 
+  401  (10:06:44 - 17/09/2016 - root ) -> ls
+  402  (10:06:45 - 17/09/2016 - root ) -> cd cdrom/
+  403  (10:06:46 - 17/09/2016 - root ) -> Ã§s
+  404  (10:06:47 - 17/09/2016 - root ) -> ls
+  405  (10:06:54 - 17/09/2016 - root ) -> tar zxvf VMwareTools-10.0.0-3000743.tar.gz  -C /root/
+  406  (10:08:37 - 17/09/2016 - root ) -> cd  /root/vmware-distrib
+  407  (10:08:58 - 17/09/2016 - root ) -> cd  /root
+  408  (10:09:00 - 17/09/2016 - root ) -> ls
+  409  (10:09:11 - 17/09/2016 - root ) -> cd vmware-tools-distrib/
+  410  (10:09:13 - 17/09/2016 - root ) -> ls
+  411  (10:09:30 - 17/09/2016 - root ) -> ./vmware-install. -d
+  412  (10:09:47 - 17/09/2016 - root ) -> ./vmware-install.pl -d
+  413  (10:12:56 - 17/09/2016 - root ) -> cd ..
+  414  (10:13:00 - 17/09/2016 - root ) -> cd ..
+  415  (10:13:25 - 17/09/2016 - root ) -> cd /etc/sysconfig/network-scripts/
+  416  (10:13:35 - 17/09/2016 - root ) -> mkdir old
+  417  (10:14:11 - 17/09/2016 - root ) -> mv ifcfg-bond* old
+  418  (10:14:24 - 17/09/2016 - root ) -> mv ifcfg-eth* old
+  419  (10:17:51 - 17/09/2016 - root ) -> cp old/ifcfg-bond0 ifcfg-eth0
+  420  (10:18:05 - 17/09/2016 - root ) -> vi ifcfg-eth0 
+  421  (10:18:24 - 17/09/2016 - root ) -> service sanhain stop
+  422  (10:18:32 - 17/09/2016 - root ) -> /etc/init.d/samhain stop
+  423  (10:18:37 - 17/09/2016 - root ) -> cp old/ifcfg-bond0 ifcfg-eth0
+  424  (10:18:40 - 17/09/2016 - root ) -> vi ifcfg-eth0 
+  425  (10:20:27 - 17/09/2016 - root ) -> cd /etc
+  426  (10:20:32 - 17/09/2016 - root ) -> cd udev
+  427  (10:20:35 - 17/09/2016 - root ) -> ls
+  428  (10:20:42 - 17/09/2016 - root ) -> cd rules.d
+  429  (10:20:43 - 17/09/2016 - root ) -> ls
+  430  (10:21:10 - 17/09/2016 - root ) -> rm -rf 70-persistent-net.rules
+  431  (10:21:27 - 17/09/2016 - root ) -> cd..
+  432  (10:21:29 - 17/09/2016 - root ) -> cd ..
+  433  (10:21:31 - 17/09/2016 - root ) -> cd ..
+  434  (10:21:35 - 17/09/2016 - root ) -> cd ..
+  435  (10:21:55 - 17/09/2016 - root ) -> cp /etc/modprobe.conf /root
+  436  (10:22:08 - 17/09/2016 - root ) -> vi /etc/modprobe.conf
+  437  (10:25:09 - 17/09/2016 - root ) -> ifconfig
+  438  (11:49:00 - 17/09/2016 - root ) -> chkconfig samhain off
+  439  (11:49:11 - 17/09/2016 - root ) -> service samhain stop
+  440  (11:49:18 - 17/09/2016 - root ) -> cd /etc/sysconfig/
+  441  (11:49:18 - 17/09/2016 - root ) -> ls
+  442  (11:49:24 - 17/09/2016 - root ) -> mkdir old
+  443  (11:49:25 - 17/09/2016 - root ) -> ls
+  444  (11:49:29 - 17/09/2016 - root ) -> rm -rf old/
+  445  (11:49:33 - 17/09/2016 - root ) -> cd network-scripts/
+  446  (11:49:33 - 17/09/2016 - root ) -> ls
+  447  (11:49:37 - 17/09/2016 - root ) -> ls old/
+  448  (11:49:44 - 17/09/2016 - root ) -> vim ifcfg-eth0 
+  449  (11:49:49 - 17/09/2016 - root ) -> ls
+  450  (11:49:53 - 17/09/2016 - root ) -> rm -rf ifcfg-eth0 
+  451  (11:50:04 - 17/09/2016 - root ) -> cp old/ifcfg-bond0 ifcfg-eth0
+  452  (11:50:07 - 17/09/2016 - root ) -> cp old/ifcfg-bond1 ifcfg-eth1
+  453  (11:50:11 - 17/09/2016 - root ) -> ls
+  454  (11:50:18 - 17/09/2016 - root ) -> vim ifcfg-eth0 
+  455  (11:50:29 - 17/09/2016 - root ) -> vim ifcfg-eth1
+  456  (11:51:02 - 17/09/2016 - root ) -> ls
+  457  (11:51:09 - 17/09/2016 - root ) -> cp /etc/modprobe.conf /root/
+  458  (11:51:14 - 17/09/2016 - root ) -> vim /etc/modprobe.conf
+  459  (11:51:27 - 17/09/2016 - root ) -> reboot
+  460  (11:58:54 - 17/09/2016 - root ) -> uptime 
+  461  (12:03:56 - 17/09/2016 - root ) -> chkconfig samhain on
+  462  (12:04:01 - 17/09/2016 - root ) -> service samhain start
+  463  (13:37:33 - 17/09/2016 - root ) -> df -h
+  464  (13:39:38 - 17/09/2016 - root ) -> mount -t cifs "//IMG01/OPERACOESTI/CAPACITY/coleta/introscope/" -o username=sahcappl,password=asdfga58 /mnt/capacity/
+  465  (13:39:42 - 17/09/2016 - root ) -> mount -t cifs "//IMG01/OPERACOESTI/CAPACITY/coleta/introscope/" -o username=sahcappl,password=asdfga58 /mnt/capacity
+  466  (13:40:49 - 17/09/2016 - root ) -> mount -t cifs "//pfs01/ti/Operacoes_TI/Gestao de Ferramentas/Checklist/APM/" -o username=P0622357,password=xinelo77 /mnt/checklist/
+  467  (13:42:02 - 17/09/2016 - root ) -> mount -t cifs "//pfs01/ti/Operacoes_TI/Gestao de Ferramentas/Checklist/APM/" -o username=P0116257,password=xinelo77 /mnt/checklist/
+  468  (13:42:20 - 17/09/2016 - root ) -> mount -t cifs "//pfs01/ti/Operacoes_TI/Gestao de Ferramentas/Checklist/APM/" -o username=F0116257,password=xinelo77 /mnt/checklist/
+  469  (13:42:40 - 17/09/2016 - root ) -> df -h
+  470  (19:32:14 - 17/09/2016 - root ) -> chkconfig samhain on
+  471  (19:32:20 - 17/09/2016 - root ) -> chkconfig --list | grep -i hp
+  472  (19:32:37 - 17/09/2016 - root ) -> chkconfig --list | grep -i hp | cut -d"" -f1
+  473  (19:32:40 - 17/09/2016 - root ) -> chkconfig --list | grep -i hp | cut -d" " -f 1
+  474  (19:33:49 - 17/09/2016 - root ) -> for i in `chkconfig --list | grep -i hp | cut -d" " -f 1`; do chkconfig $i ; done
+  475  (20:05:41 - 17/09/2016 - root ) -> df - h
+  476  (20:05:44 - 17/09/2016 - root ) -> df -h
+  477  (20:06:20 - 17/09/2016 - root ) -> df -h
+  478  (23:12:00 - 17/09/2016 - root ) -> cd /opt/introscope/coletor7/10.2/bin/
+  479  (23:12:08 - 17/09/2016 - root ) -> ./EMCtrl.sh status
+  480  (23:12:10 - 17/09/2016 - root ) -> ./EMCtrl.sh start
+  481  (23:12:18 - 17/09/2016 - root ) -> cd ../../../coletor8/10.2/bin/
+  482  (23:12:21 - 17/09/2016 - root ) -> ./EMCtrl.sh status
+  483  (23:12:23 - 17/09/2016 - root ) -> ./EMCtrl.sh start
+  484  (23:12:58 - 17/09/2016 - root ) -> ./EMCtrl.sh status
+  485  (23:13:01 - 17/09/2016 - root ) -> pwd
+  486  (23:13:09 - 17/09/2016 - root ) -> ssh li793
+  487  (10:40:34 - 29/09/2016 - root ) -> caf status
+  488  (10:41:40 - 29/09/2016 - root ) -> caf setserveraddress
+  489  (10:42:47 - 29/09/2016 - root ) -> caf restart
+  490  (12:49:46 - 03/10/2016 - root ) -> clear
+  491  (12:49:48 - 03/10/2016 - root ) -> df -h
+  492  (13:03:51 - 03/10/2016 - root ) -> df -h
+  493  (01:13:22 - 16/10/2016 - root ) -> date
+  494  (01:13:33 - 16/10/2016 - root ) -> ssh li791
+  495  (09:36:16 - 24/10/2016 - root ) -> cd /opt/introscope/
+  496  (09:36:19 - 24/10/2016 - root ) -> çll
+  497  (09:36:20 - 24/10/2016 - root ) -> ll
+  498  (09:36:30 - 24/10/2016 - root ) -> cd coletor7/10.2/bin/
+  499  (09:36:39 - 24/10/2016 - root ) -> ll
+  500  (09:36:42 - 24/10/2016 - root ) -> pwd
+  501  (09:36:31 - 26/10/2016 - root ) -> lll
+  502  (09:36:33 - 26/10/2016 - root ) -> ll
+  503  (09:36:37 - 26/10/2016 - root ) -> cd ..
+  504  (09:36:38 - 26/10/2016 - root ) -> ll
+  505  (09:37:22 - 26/10/2016 - root ) -> cd tmp
+  506  (09:37:23 - 26/10/2016 - root ) -> ll
+  507  (09:45:37 - 26/10/2016 - root ) -> ll
+  508  (09:45:45 - 26/10/2016 - root ) -> chmod 777 dell-dset-lx64-3.7.0.219.bin
+  509  (09:45:50 - 26/10/2016 - root ) -> ./dell-dset-lx64-3.7.0.219.bin
+  510  (09:50:50 - 26/10/2016 - root ) -> ll
+  511  (09:50:53 - 26/10/2016 - root ) -> cd ..
+  512  (09:50:55 - 26/10/2016 - root ) -> cd root
+  513  (09:50:56 - 26/10/2016 - root ) -> ll
+  514  (09:51:03 - 26/10/2016 - root ) -> cd /
+  515  (09:51:04 - 26/10/2016 - root ) -> ll
+  516  (09:51:11 - 26/10/2016 - root ) -> cd tmp
+  517  (09:51:13 - 26/10/2016 - root ) -> ll
+  518  (09:51:21 - 26/10/2016 - root ) -> cd ..
+  519  (09:51:23 - 26/10/2016 - root ) -> ll
+  520  (09:51:37 - 26/10/2016 - root ) -> cd 
+  521  (09:51:39 - 26/10/2016 - root ) -> ~ll
+  522  (09:51:41 - 26/10/2016 - root ) -> cd /
+  523  (09:51:45 - 26/10/2016 - root ) -> cd tmp
+  524  (09:51:48 - 26/10/2016 - root ) -> ll
+  525  (12:16:30 - 27/10/2016 - root ) -> exit
+  526  (11:37:04 - 27/10/2016 - root ) -> ps aux | grep - java
+  527  (11:37:07 - 27/10/2016 - root ) -> ps aux | grep -i java
+  528  (11:37:14 - 27/10/2016 - root ) -> cd /opt/introscope/coletor8/10.2/logs/
+  529  (11:37:18 - 27/10/2016 - root ) -> less IntroscopeEnterpriseManager.log 
+  530  (11:38:29 - 27/10/2016 - root ) -> less IntroscopeEnterpriseManager.log 
+  531  (22:12:32 - 28/10/2016 - root ) -> cd /opt/introscope/coletor7/10.2/bin/
+  532  (22:12:41 - 28/10/2016 - root ) -> ./EMCtrl.sh status
+  533  (22:12:51 - 28/10/2016 - root ) -> ./EMCtrl.sh stop
+  534  (22:13:14 - 28/10/2016 - root ) -> cd ../../../coletor8/10.2/bin/
+  535  (22:13:15 - 28/10/2016 - root ) -> pwd
+  536  (22:13:20 - 28/10/2016 - root ) -> ./EMCtrl.sh status
+  537  (22:13:25 - 28/10/2016 - root ) -> ./EMCtrl.sh stop
+  538  (22:28:33 - 28/10/2016 - root ) -> halt
+  539  (08:55:52 - 27/01/2017 - root ) -> df -h
+  540  (09:27:22 - 27/01/2017 - root ) -> df -h
+  541  (09:41:04 - 27/01/2017 - root ) -> for i in $(ls); do echo item: $i done; ;
+  542  (09:41:14 - 27/01/2017 - root ) -> for i in $(ls); do echo item: $i; done
+  543  (09:41:31 - 27/01/2017 - root ) -> for i in $(ls /sys/class/scsi_host/); do echo item: $i; done
+  544  (09:42:32 - 27/01/2017 - root ) -> for i in $(ls /sys/class/scsi_host/); do echo "- - -" > /sys/class/scsi_host/$i/scan; done
+  545  (10:05:48 - 27/01/2017 - root ) -> fdisk /dev/sdd 
+  546  (10:05:58 - 27/01/2017 - root ) -> df -h
+  547  (10:06:12 - 27/01/2017 - root ) -> fdisk -l
+  548  (10:06:18 - 27/01/2017 - root ) -> fdisk /dev/sdd
+  549  (10:11:14 - 27/01/2017 - root ) -> pvdisplay 
+  550  (10:11:18 - 27/01/2017 - root ) -> pvdisplay -l
+  551  (10:11:24 - 27/01/2017 - root ) -> pvcreate /dev/sdd1 
+  552  (10:11:33 - 27/01/2017 - root ) -> vi /etc/lvm/lvm.conf 
+  553  (10:13:28 - 27/01/2017 - root ) -> pvcreate /dev/sdd1 
+  554  (10:13:33 - 27/01/2017 - root ) -> pvdisplay 
+  555  (10:14:14 - 27/01/2017 - root ) -> vgcreate --help
+  556  (10:14:44 - 27/01/2017 - root ) -> vgcreate -v vg00 /dev/sdd1
+  557  (10:14:51 - 27/01/2017 - root ) -> df -h
+  558  (10:18:34 - 27/01/2017 - root ) -> vgdisplay -l
+  559  (10:18:36 - 27/01/2017 - root ) -> vgdisplay
+  560  (10:18:49 - 27/01/2017 - root ) -> lvcreate -l
+  561  (10:18:53 - 27/01/2017 - root ) -> lvcreate --help
+  562  (10:28:22 - 27/01/2017 - root ) -> lvcreate -name lv00 --size 2048m vg00
+  563  (10:28:40 - 27/01/2017 - root ) -> lvcreate -name vg00 --size 2048m lv00
+  564  (10:28:47 - 27/01/2017 - root ) -> lvcreate -name vg00 --size 2048m lv01
+  565  (10:29:52 - 27/01/2017 - root ) -> lvcreate -name vg00 --size 4096m lv02
+  566  (10:29:56 - 27/01/2017 - root ) -> lvcreate -name vg00 --size 4096m lv03
+  567  (10:30:26 - 27/01/2017 - root ) -> lvdisplay 
+  568  (10:30:44 - 27/01/2017 - root ) -> vgdisplay 
+  569  (10:30:49 - 27/01/2017 - root ) -> lvdisplay 
+  570  (10:30:51 - 27/01/2017 - root ) -> lvdisplay -v
+  571  (10:31:03 - 27/01/2017 - root ) -> cd /dev/mapper/
+  572  (10:31:04 - 27/01/2017 - root ) -> ls -l
+  573  (10:31:05 - 27/01/2017 - root ) -> cd ..
+  574  (10:31:31 - 27/01/2017 - root ) -> cd /de
+  575  (10:31:33 - 27/01/2017 - root ) -> clear
+  576  (10:31:36 - 27/01/2017 - root ) -> pvdisplay 
+  577  (10:31:53 - 27/01/2017 - root ) -> lvdisplay 
+  578  (10:32:11 - 27/01/2017 - root ) -> lvcreate -name vg00 --size 2048m lv00
+  579  (10:33:01 - 27/01/2017 - root ) -> vgdisplay 
+  580  (10:33:11 - 27/01/2017 - root ) -> lvcreate -name lv00 --size 2048m vg00
+  581  (10:33:20 - 27/01/2017 - root ) -> vgdisplay 
+  582  (10:33:34 - 27/01/2017 - root ) -> vgremove vg00
+  583  (10:33:38 - 27/01/2017 - root ) -> vgdisplay 
+  584  (10:33:42 - 27/01/2017 - root ) -> pvdisplay 
+  585  (10:33:44 - 27/01/2017 - root ) -> pvscan 
+  586  (10:34:00 - 27/01/2017 - root ) -> vgcreate vg00 /dev/sdd1 
+  587  (10:34:04 - 27/01/2017 - root ) -> vgdisplay 
+  588  (10:34:09 - 27/01/2017 - root ) -> vgscan 
+  589  (10:34:45 - 27/01/2017 - root ) -> lvcreate --name lv00 --size 2048m vg00
+  590  (10:34:51 - 27/01/2017 - root ) -> lvcreate --name lv01 --size 2048m vg00
+  591  (10:35:03 - 27/01/2017 - root ) -> lvcreate --name lv02 --size 4096m vg00
+  592  (10:35:12 - 27/01/2017 - root ) -> lvcreate --name lv03 --size 4096m vg00
+  593  (10:35:23 - 27/01/2017 - root ) -> lvcreate --name lv04 --size 5120m vg00
+  594  (10:35:55 - 27/01/2017 - root ) -> lvcreate --name lv05 --size 8192m vg00
+  595  (10:36:02 - 27/01/2017 - root ) -> lvcreate --name lv06 --size 8192m vg00
+  596  (10:36:10 - 27/01/2017 - root ) -> lvcreate --name lv07 --size 2048m vg00
+  597  (10:36:42 - 27/01/2017 - root ) -> lvcreate --name coletor7 --size 230400m vg00
+  598  (10:36:48 - 27/01/2017 - root ) -> lvcreate --name coletor8 --size 230400m vg00
+  599  (10:37:10 - 27/01/2017 - root ) -> lvcreate --name data7 --size 66560m vg00
+  600  (10:37:14 - 27/01/2017 - root ) -> lvcreate --name data8 --size 66560m vg00
+  601  (10:37:18 - 27/01/2017 - root ) -> lvdisplay 
+  602  (10:37:34 - 27/01/2017 - root ) -> ls /dev/vg00/
+  603  (10:41:00 - 27/01/2017 - root ) -> for i in $(ls /dev/vg00); do echo: $i; done
+  604  (10:41:07 - 27/01/2017 - root ) -> for i in $(ls /dev/vg00/); do echo: $i; done
+  605  (10:41:15 - 27/01/2017 - root ) -> for i in $(ls /dev/vg00/*); do echo: $i; done
+  606  (10:41:19 - 27/01/2017 - root ) -> for i in $(ls /dev/vg00/*); do echo $i; done
+  607  (10:41:23 - 27/01/2017 - root ) -> for i in $(ls /dev/vg00); do echo $i; done
+  608  (10:41:34 - 27/01/2017 - root ) -> for i in $(ls /dev/vg00/*); do echo $i; done
+  609  (10:41:49 - 27/01/2017 - root ) -> for i in $(ls /dev/vg00/*); do mkfs.ext3 $i; done
+  610  (10:55:41 - 27/01/2017 - root ) -> fdisk -l
+  611  (10:55:47 - 27/01/2017 - root ) -> lvdisplay -l
+  612  (10:55:50 - 27/01/2017 - root ) -> lvdisplay 
+  613  (10:55:58 - 27/01/2017 - root ) -> cd /mnt/
+  614  (10:55:59 - 27/01/2017 - root ) -> ls -l
+  615  (10:56:03 - 27/01/2017 - root ) -> cd checklist/
+  616  (10:56:04 - 27/01/2017 - root ) -> ls -l
+  617  (10:56:05 - 27/01/2017 - root ) -> cd ..
+  618  (10:56:36 - 27/01/2017 - root ) -> df -h
+  619  (10:58:39 - 27/01/2017 - root ) -> for i in `seq 1 12`; do mkdir -f /mnt/teste/lv0$i; done
+  620  (10:58:44 - 27/01/2017 - root ) -> cd /mnt/tes
+  621  (10:58:49 - 27/01/2017 - root ) -> mkdir --help
+  622  (10:59:01 - 27/01/2017 - root ) -> for i in `seq 1 12`; do mkdir -p /mnt/teste/lv0$i; done
+  623  (10:59:05 - 27/01/2017 - root ) -> ls -l
+  624  (10:59:06 - 27/01/2017 - root ) -> cd teste/
+  625  (10:59:07 - 27/01/2017 - root ) -> ls -l
+  626  (10:59:33 - 27/01/2017 - root ) -> for i in $(ls /dev/vg00); do echo $i; done
+  627  (10:59:41 - 27/01/2017 - root ) -> for i in $(ls /dev/vg00/*); do echo $i; done
+  628  (11:04:23 - 27/01/2017 - root ) -> for i in $(ls /dev/vg00/*); do vg = $i ; echo $vg ; done
+  629  (11:04:32 - 27/01/2017 - root ) -> for i in $(ls /dev/vg00/*); do $vg = $i ; echo $vg ; done
+  630  (11:05:17 - 27/01/2017 - root ) -> for i in $(ls /dev/vg00/*); do vg=$i ; echo $vg ; done
+  631  (11:06:00 - 27/01/2017 - root ) -> for i in $(ls /dev/vg00/*); do vg=$i ; for i in $(ls /mnt/teste/*; echo $i ; done
+  632  (14:22:37 - 24/02/2017 - root ) -> ;
+  633  (11:06:25 - 27/01/2017 - root ) -> for i in $(ls /dev/vg00/*); do vg=$i; for i in $(ls /mnt/teste/*; do echo $i;done ; done
+  634  (14:22:37 - 24/02/2017 - root ) -> ;
+  635  (11:06:33 - 27/01/2017 - root ) -> for i in $(ls /dev/vg00/*); do vg=$i; for i in $(ls /mnt/teste/*); do echo $i;done ; done
+  636  (11:06:33 - 27/01/2017 - root ) -> ;
+  637  (11:06:44 - 27/01/2017 - root ) -> mount
+  638  (11:07:23 - 27/01/2017 - root ) -> for i in $(ls /dev/vg00/*); do vg=$i; for i in $(ls /mnt/teste/*; do echo $vg $i;done ; done
+  639  (14:22:37 - 24/02/2017 - root ) -> ;
+  640  (11:07:46 - 27/01/2017 - root ) -> for i in $(ls /dev/vg00/*); do vg=$i; for i in $(ls /mnt/teste/*; do echo $vg; echo $i; done; done
+  641  (14:22:37 - 24/02/2017 - root ) -> ;
+  642  (11:07:59 - 27/01/2017 - root ) -> for i in $(ls /dev/vg00/*); do vg=$i; for i in $(ls /mnt/teste/*); do echo $vg; echo $i; done; done
+  643  (11:07:59 - 27/01/2017 - root ) -> ;
+  644  (11:08:13 - 27/01/2017 - root ) -> for i in $(ls /dev/vg00/*); do vg=$i; for i in $(ls /mnt/teste/*); do echo $vg; echo $i; done; done; wc -l
+  645  (11:08:34 - 27/01/2017 - root ) -> for i in $(ls /dev/vg00/*); do vg=$i; for i in $(ls /mnt/teste/*); do echo $vg; echo $i; done
+  646  (11:08:52 - 27/01/2017 - root ) -> for i in $(ls /dev/vg00/*); do vg=$i; for i in $(ls /mnt/teste/*); do mount $vg $i; done; done
+  647  (11:09:11 - 27/01/2017 - root ) -> for i in $(ls /dev/vg00/*); do vg=$i; for i in $(ls /mnt/teste/*); do mount $i $vg; done; done
+  648  (11:09:23 - 27/01/2017 - root ) -> ls -l
+  649  (11:10:02 - 27/01/2017 - root ) -> mount /dev/vg00/lv00 /mnt/teste/lv01
+  650  (11:10:07 - 27/01/2017 - root ) -> mount /dev/vg00/lv01 /mnt/teste/lv02
+  651  (11:10:11 - 27/01/2017 - root ) -> mount /dev/vg00/lv02 /mnt/teste/lv03
+  652  (11:10:21 - 27/01/2017 - root ) -> mount /dev/vg00/lv03 /mnt/teste/lv04
+  653  (11:10:30 - 27/01/2017 - root ) -> mount /dev/vg00/lv04 /mnt/teste/lv05
+  654  (11:10:40 - 27/01/2017 - root ) -> mount /dev/vg00/lv05 /mnt/teste/lv06
+  655  (11:10:48 - 27/01/2017 - root ) -> mount /dev/vg00/lv06 /mnt/teste/lv07
+  656  (11:10:53 - 27/01/2017 - root ) -> mount /dev/vg00/lv07 /mnt/teste/lv08
+  657  (11:11:02 - 27/01/2017 - root ) -> mount /dev/vg00/coletor7 /mnt/teste/lv09
+  658  (11:11:08 - 27/01/2017 - root ) -> mount /dev/vg00/coletor8 /mnt/teste/lv10
+  659  (11:11:28 - 27/01/2017 - root ) -> mount /dev/vg00/coletor8 /mnt/teste/lv010
+  660  (11:11:35 - 27/01/2017 - root ) -> mount /dev/vg00/data7 /mnt/teste/lv011
+  661  (11:11:42 - 27/01/2017 - root ) -> mount /dev/vg00/data8 /mnt/teste/lv012
+  662  (11:11:47 - 27/01/2017 - root ) -> mount
+  663  (11:25:38 - 27/01/2017 - root ) -> mkdir /mnt/migracao/root
+  664  (11:25:42 - 27/01/2017 - root ) -> mkdir -p /mnt/migracao/root
+  665  (11:26:02 - 27/01/2017 - root ) -> mount
+  666  (11:26:05 - 27/01/2017 - root ) -> mount | grep root
+  667  (11:26:08 - 27/01/2017 - root ) -> mount | grep /
+  668  (11:26:18 - 27/01/2017 - root ) -> mount | grep sdc1
+  669  (11:26:45 - 27/01/2017 - root ) -> mount -o ro /dev/sdc1 /mnt/migracao/root
+  670  (11:26:50 - 27/01/2017 - root ) -> mount --help
+  671  (11:51:53 - 27/01/2017 - root ) -> mount --hrlp
+  672  (11:52:01 - 27/01/2017 - root ) -> mount --help
+  673  (11:52:17 - 27/01/2017 - root ) -> man mount
+  674  (11:58:35 - 27/01/2017 - root ) -> find / -xdev
+  675  (11:58:51 - 27/01/2017 - root ) -> find --help
+  676  (11:59:03 - 27/01/2017 - root ) -> man find
+  677  (12:02:45 - 27/01/2017 - root ) -> find / -xdev
+  678  (12:03:00 - 27/01/2017 - root ) -> find / -xdev | less
+  679  (12:03:39 - 27/01/2017 - root ) -> ls -l
+  680  (12:03:41 - 27/01/2017 - root ) -> df -h
+  681  (12:05:25 - 27/01/2017 - root ) -> cd 
+  682  (12:05:27 - 27/01/2017 - root ) -> ls -l
+  683  (12:05:30 - 27/01/2017 - root ) -> pwd
+  684  (12:05:33 - 27/01/2017 - root ) -> cls
+  685  (12:05:35 - 27/01/2017 - root ) -> cls
+  686  (12:05:36 - 27/01/2017 - root ) -> clear
+  687  (12:05:46 - 27/01/2017 - root ) -> mkdir -p /tmp/kill/00
+  688  (12:05:52 - 27/01/2017 - root ) -> cd /tmp/kill/00/
+  689  (12:05:53 - 27/01/2017 - root ) -> ls -l
+  690  (12:06:09 - 27/01/2017 - root ) -> uname -a
+  691  (12:06:26 - 27/01/2017 - root ) -> gunzip < /boot/initrd-2.6.18-408.el5.img
+  692  (14:22:37 - 24/02/2017 - root ) -> cd /mnt/teste/root/
+  693  (14:22:37 - 24/02/2017 - root ) -> ls -l
+  694  (14:22:37 - 24/02/2017 - root ) -> mount -t proc /proc /proc
+  695  (14:22:37 - 24/02/2017 - root ) -> mount -t sysfs /sys /sys
+  696  (14:22:37 - 24/02/2017 - root ) -> vgmknodes -v
+  697  (14:22:37 - 24/02/2017 - root ) -> mount
+  698  (14:22:37 - 24/02/2017 - root ) -> who
+  699  (14:22:37 - 24/02/2017 - root ) -> w
+  700  (14:22:37 - 24/02/2017 - root ) -> exit
+  701  (14:22:37 - 24/02/2017 - root ) -> mount -t /proc /proc
+  702  (14:22:37 - 24/02/2017 - root ) -> mount -t proc /proc /proc
+  703  (14:22:37 - 24/02/2017 - root ) -> mount -t sysfs /sys /sys
+  704  (14:22:37 - 24/02/2017 - root ) -> pwd
+  705  (14:22:37 - 24/02/2017 - root ) -> exit
+  706  (14:22:37 - 24/02/2017 - root ) -> mount -t proc /proc /proc
+  707  (14:22:37 - 24/02/2017 - root ) -> mount -t sysfs /sys /sys
+  708  (14:22:37 - 24/02/2017 - root ) -> vgmknodes -v
+  709  (14:22:37 - 24/02/2017 - root ) -> cd /dev/mapper/control 
+  710  (14:22:37 - 24/02/2017 - root ) -> cd /dev/mapper/
+  711  (14:22:37 - 24/02/2017 - root ) -> ls -l
+  712  (14:22:37 - 24/02/2017 - root ) -> vgdisplay 
+  713  (14:22:37 - 24/02/2017 - root ) -> pwd
+  714  (14:22:37 - 24/02/2017 - root ) -> cd -
+  715  (14:22:37 - 24/02/2017 - root ) -> pwd
+  716  (14:22:37 - 24/02/2017 - root ) -> mount
+  717  (14:22:37 - 24/02/2017 - root ) -> vi /etc/fstab
+  718  (14:22:37 - 24/02/2017 - root ) -> cd /mnt/teste/root/
+  719  (14:22:37 - 24/02/2017 - root ) -> ls -l
+  720  (14:22:37 - 24/02/2017 - root ) -> vgmknodes --help
+  721  (14:22:37 - 24/02/2017 - root ) -> man vgmknodes
+  722  (14:22:37 - 24/02/2017 - root ) -> cd /tmp/kill/00
+  723  (14:22:37 - 24/02/2017 - root ) -> ls -l
+  724  (14:22:37 - 24/02/2017 - root ) -> cd /boot/
+  725  (14:22:37 - 24/02/2017 - root ) -> ls -l
+  726  (14:22:37 - 24/02/2017 - root ) -> cd /
+  727  (14:22:37 - 24/02/2017 - root ) -> uname -a
+  728  (14:22:37 - 24/02/2017 - root ) -> exit
+  729  (14:22:37 - 24/02/2017 - root ) -> mount
+  730  (14:22:37 - 24/02/2017 - root ) -> vgmknodes -v
+  731  (14:22:37 - 24/02/2017 - root ) -> exit
+  732  (14:22:37 - 24/02/2017 - root ) -> pwd
+  733  (14:22:37 - 24/02/2017 - root ) -> ls -l
+  734  (14:22:37 - 24/02/2017 - root ) -> mount -t proc /proc /proc
+  735  (14:22:37 - 24/02/2017 - root ) -> mount -t sysfs /sys /sys
+  736  (14:22:37 - 24/02/2017 - root ) -> vgmknodes -v
+  737  (14:22:37 - 24/02/2017 - root ) -> shutdown -h now
+  738  (14:22:37 - 24/02/2017 - root ) -> exit
+  739  (14:22:37 - 24/02/2017 - root ) -> mount -t proc /proc /proc
+  740  (14:22:37 - 24/02/2017 - root ) -> mount -t sysfs /sys /sys
+  741  (14:22:37 - 24/02/2017 - root ) -> vgmknodes -v
+  742  (14:22:37 - 24/02/2017 - root ) -> pwd
+  743  (14:22:37 - 24/02/2017 - root ) -> mount
+  744  (14:22:37 - 24/02/2017 - root ) -> ls -l
+  745  (14:22:37 - 24/02/2017 - root ) -> cd tivoli/
+  746  (14:22:37 - 24/02/2017 - root ) -> ls -l
+  747  (14:22:37 - 24/02/2017 - root ) -> ls -l
+  748  (14:22:37 - 24/02/2017 - root ) -> cd ..
+  749  (14:22:37 - 24/02/2017 - root ) -> cd /var/
+  750  (14:22:37 - 24/02/2017 - root ) -> ls -l
+  751  (14:22:37 - 24/02/2017 - root ) -> cd ..
+  752  (14:22:37 - 24/02/2017 - root ) -> yum install lvm
+  753  (14:22:37 - 24/02/2017 - root ) -> ifconfig
+  754  (14:22:37 - 24/02/2017 - root ) -> ifconfig
+  755  (14:22:37 - 24/02/2017 - root ) -> cd /root/
+  756  (14:22:37 - 24/02/2017 - root ) -> ls -l
+  757  (14:22:37 - 24/02/2017 - root ) -> cd vmware-tools-distrib/
+  758  (14:22:37 - 24/02/2017 - root ) -> ls -l
+  759  (14:22:37 - 24/02/2017 - root ) -> ./vmware-install.pl -d
+  760  (14:22:37 - 24/02/2017 - root ) -> exit
+  761  (14:22:37 - 24/02/2017 - root ) -> mount -t proc /proc /proc
+  762  (14:22:37 - 24/02/2017 - root ) -> mount -t sysfs /sys /sys
+  763  (14:22:37 - 24/02/2017 - root ) -> mount
+  764  (14:22:37 - 24/02/2017 - root ) -> vgmknodes -v
+  765  (14:22:37 - 24/02/2017 - root ) -> pvscan 
+  766  (14:22:37 - 24/02/2017 - root ) -> fdisk -l
+  767  (14:22:37 - 24/02/2017 - root ) -> vgmknodes -v --refresh
+  768  (14:22:37 - 24/02/2017 - root ) -> cd /dev/
+  769  (14:22:37 - 24/02/2017 - root ) -> ls -l
+  770  (14:22:37 - 24/02/2017 - root ) -> cd mapper/
+  771  (14:22:37 - 24/02/2017 - root ) -> ls -l
+  772  (14:22:37 - 24/02/2017 - root ) -> vgmknodes -v /dev/mapper/vg00-lv0
+  773  (14:22:37 - 24/02/2017 - root ) -> mount -t dev /dev 
+  774  (14:22:37 - 24/02/2017 - root ) -> chroot --help
+  775  (14:22:37 - 24/02/2017 - root ) -> vgmknodes -v /dev/mapper/vg00-lv01
+  776  (14:22:37 - 24/02/2017 - root ) -> vgchange -ay
+  777  (14:22:37 - 24/02/2017 - root ) -> exit
+  778  (14:22:37 - 24/02/2017 - root ) -> ls -l
+  779  (14:22:37 - 24/02/2017 - root ) -> mkinitrd --help
+  780  (14:22:37 - 24/02/2017 - root ) -> vi /etc/fstab
+  781  (14:22:37 - 24/02/2017 - root ) -> vi /etc/fstab
+  782  (14:22:37 - 24/02/2017 - root ) -> mkinitrd --help
+  783  (14:22:37 - 24/02/2017 - root ) -> man mkinitrd
+  784  (14:22:37 - 24/02/2017 - root ) -> vi /etc/modprobe.conf
+  785  (14:22:37 - 24/02/2017 - root ) -> vi /etc/lvm/lvm.conf
+  786  (14:22:37 - 24/02/2017 - root ) -> vgmknodes -v
+  787  (14:22:37 - 24/02/2017 - root ) -> exit
+  788  (14:22:37 - 24/02/2017 - root ) -> vgmknodes -v
+  789  (14:22:37 - 24/02/2017 - root ) -> cd /etc/
+  790  (14:22:37 - 24/02/2017 - root ) -> ls -l
+  791  (14:22:37 - 24/02/2017 - root ) -> cd /root/
+  792  (14:22:37 - 24/02/2017 - root ) -> ls -l
+  793  (14:22:37 - 24/02/2017 - root ) -> cat modprobe.conf 
+  794  (14:22:37 - 24/02/2017 - root ) -> vgmknodes -v
+  795  (14:22:37 - 24/02/2017 - root ) -> vgmknodes -v /dev/mapper/vg00-lv0
+  796  (14:22:37 - 24/02/2017 - root ) -> mkinitrd -v /boot/initrd-2.6.18-408.el5.img /boot/initrd-2.6.18-408.el5-lvm.img --with=lvm
+  797  (14:22:37 - 24/02/2017 - root ) -> mkinitrd -v /boot/initrd-2.6.18-408.el5-lvm.img $(uname -r) --with=lvm
+  798  (14:22:37 - 24/02/2017 - root ) -> man mkinitrd
+  799  (14:22:37 - 24/02/2017 - root ) -> mkinitrd -v /boot/initrd-2.6.18-408.el5-lvm.img $(uname -r) --with=lvm2
+  800  (14:22:37 - 24/02/2017 - root ) -> lvm
+  801  (14:22:37 - 24/02/2017 - root ) -> exit
+  802  (14:22:37 - 24/02/2017 - root ) -> cd /boot/
+  803  (14:22:37 - 24/02/2017 - root ) -> ls -l
+  804  (14:22:37 - 24/02/2017 - root ) -> exit
+  805  (14:22:37 - 24/02/2017 - root ) -> mount
+  806  (14:22:37 - 24/02/2017 - root ) -> mount --bind /dev /dev
+  807  (14:22:37 - 24/02/2017 - root ) -> mount
+  808  (14:22:37 - 24/02/2017 - root ) -> vgmknodes -v
+  809  (14:22:37 - 24/02/2017 - root ) -> mkinitrd -v /boot/initrd-$(uname -r)-lvm.img $(uname -r)
+  810  (14:22:37 - 24/02/2017 - root ) -> mkinitrd -v /boot/initrd-2.6.18-308.el5-lvm.img 2.6.18-308.el5
+  811  (14:22:37 - 24/02/2017 - root ) -> uname -a
+  812  (14:22:37 - 24/02/2017 - root ) -> uname -r
+  813  (14:22:37 - 24/02/2017 - root ) -> mkinitrd -v /boot/initrd-2.6.18-408.el5-lvm.img 2.6.18-408.el5
+  814  (14:22:37 - 24/02/2017 - root ) -> mkinitrd -v /boot/initrd-2.6.18-408.el5-lvm.img 2.6.18-408.el5 --with=lvm
+  815  (14:22:37 - 24/02/2017 - root ) -> mkinitrd -f -v /boot/initrd-2.6.18-408.el5-lvm.img 2.6.18-408.el5 --with=lvm
+  816  (14:22:37 - 24/02/2017 - root ) -> mkinitrd -f -v /boot/initrd-2.6.18-408.el5-lvm.img 2.6.18-408.el5 --pre-load=lvm
+  817  (14:22:37 - 24/02/2017 - root ) -> mkinitrd -f -v /boot/initrd-2.6.18-408.el5-lvm.img 2.6.18-408.el5 --preload=lvm
+  818  (14:22:37 - 24/02/2017 - root ) -> exit
+  819  (14:22:37 - 24/02/2017 - root ) -> mount -t proc /proc /proc
+  820  (14:22:37 - 24/02/2017 - root ) -> mount -t sysfs /sys /sys
+  821  (14:22:37 - 24/02/2017 - root ) -> man mount
+  822  (14:22:37 - 24/02/2017 - root ) -> cd /dev/
+  823  (14:22:37 - 24/02/2017 - root ) -> ls -l
+  824  (14:22:37 - 24/02/2017 - root ) -> cd -
+  825  (14:22:37 - 24/02/2017 - root ) -> vgmknodes -v
+  826  (14:22:37 - 24/02/2017 - root ) -> vgscan 
+  827  (14:22:37 - 24/02/2017 - root ) -> exit
+  828  (14:22:37 - 24/02/2017 - root ) -> mount
+  829  (14:22:37 - 24/02/2017 - root ) -> vgmknodes -v
+  830  (14:22:37 - 24/02/2017 - root ) -> vgscan 
+  831  (14:22:37 - 24/02/2017 - root ) -> pvscan 
+  832  (14:22:37 - 24/02/2017 - root ) -> vgmknodes -v
+  833  (14:22:37 - 24/02/2017 - root ) -> mkinitrd -v /boot/initrd-2.6.18-408.el5-lvm.img $(uname -r)
+  834  (14:22:37 - 24/02/2017 - root ) -> mkinitrd -f -v /boot/initrd-2.6.18-408.el5-lvm.img $(uname -r)
+  835  (14:22:37 - 24/02/2017 - root ) -> mkinitrd -f -v /boot/initrd-2.6.18-408.el5-lvm.img 2.6.18-408.el5
+  836  (14:22:37 - 24/02/2017 - root ) -> ls -l
+  837  (14:22:37 - 24/02/2017 - root ) -> cd /boot/
+  838  (14:22:37 - 24/02/2017 - root ) -> ls -l
+  839  (14:22:37 - 24/02/2017 - root ) -> vi /etc/fstab
+  840  (14:22:37 - 24/02/2017 - root ) -> vi /etc/grub.conf 
+  841  (14:22:37 - 24/02/2017 - root ) -> exit
+  842  (16:29:07 - 06/02/2017 - root ) -> ifconfig
+  843  (16:29:13 - 06/02/2017 - root ) -> df -h
+  844  (16:29:38 - 06/02/2017 - root ) -> vi /etc/fstab
+  845  (16:29:56 - 06/02/2017 - root ) -> mount /dev/sdc1 /mnt/teste/root/
+  846  (16:30:12 - 06/02/2017 - root ) -> cat /mnt/teste/root/etc/fstab
+  847  (16:30:22 - 06/02/2017 - root ) -> cat /mnt/teste/root/etc/fstab | grep introscope
+  848  (16:30:29 - 06/02/2017 - root ) -> cat /mnt/teste/root/etc/fstab | grep introscope >> /etc/fstab
+  849  (16:30:32 - 06/02/2017 - root ) -> vi /etc/fstab
+  850  (16:31:13 - 06/02/2017 - root ) -> ls /dev/vg00/
+  851  (16:31:19 - 06/02/2017 - root ) -> vi /etc/fstab
+  852  (16:32:49 - 06/02/2017 - root ) -> mount -a
+  853  (16:32:51 - 06/02/2017 - root ) -> df -h
+  854  (16:33:16 - 06/02/2017 - root ) -> chkconfig --list | grep hp
+  855  (16:33:28 - 06/02/2017 - root ) -> chconfig --level 345 hp-asrd off
+  856  (16:33:32 - 06/02/2017 - root ) -> chkconfig --level 345 hp-asrd off
+  857  (16:33:38 - 06/02/2017 - root ) -> chkconfig --level 345 hp-health off
+  858  (16:33:44 - 06/02/2017 - root ) -> chkconfig --level 345 hp-ilo off
+  859  (16:33:51 - 06/02/2017 - root ) -> chkconfig --level 345 hp-snmp-agents off
+  860  (16:34:01 - 06/02/2017 - root ) -> chkconfig --level 345 hpsmhd off
+  861  (16:34:06 - 06/02/2017 - root ) -> chkconfig --level 345 hpvca off
+  862  (16:34:13 - 06/02/2017 - root ) -> cd /etc/rc3.d/
+  863  (16:34:14 - 06/02/2017 - root ) -> ls -l
+  864  (16:35:01 - 06/02/2017 - root ) -> mv S51emcp_mond K51emcp_mond
+  865  (16:35:28 - 06/02/2017 - root ) -> vi /etc/modprobe.conf
+  866  (16:35:47 - 06/02/2017 - root ) -> vi /etc/sysconfig/network-scripts/ifcfg-eth0 
+  867  (16:36:07 - 06/02/2017 - root ) -> vi /etc/sysconfig/network-scripts/ifcfg-eth1
+  868  (16:36:18 - 06/02/2017 - root ) -> /etc/init.d/network restart
+  869  (16:36:28 - 06/02/2017 - root ) -> cd /root/
+  870  (16:36:29 - 06/02/2017 - root ) -> ls -l
+  871  (16:36:34 - 06/02/2017 - root ) -> cd vmware-tools-distrib
+  872  (16:36:38 - 06/02/2017 - root ) -> ./vmware-install.pl -d
+  873  (16:37:51 - 06/02/2017 - root ) -> /etc/init.d/network restart
+  874  (16:37:58 - 06/02/2017 - root ) -> ifconfig
+  875  (16:41:14 - 06/02/2017 - root ) -> reboot
+  876  (16:54:40 - 06/02/2017 - root ) -> find / -name Power
+  877  (16:55:44 - 06/02/2017 - root ) -> cd /etc/rc3.d/
+  878  (16:55:45 - 06/02/2017 - root ) -> ls -l
+  879  (16:55:48 - 06/02/2017 - root ) -> ls -l S*
+  880  (16:56:32 - 06/02/2017 - root ) -> ls -l S*
+  881  (16:56:36 - 06/02/2017 - root ) -> ls -l S* | less
+  882  (16:57:44 - 06/02/2017 - root ) -> cat /etc/inittab 
+  883  (16:57:56 - 06/02/2017 - root ) -> cd /etc/init.d/
+  884  (16:58:00 - 06/02/2017 - root ) -> ls -l
+  885  (16:58:23 - 06/02/2017 - root ) -> powermt --help
+  886  (16:58:50 - 06/02/2017 - root ) -> rpm -qa | grep power
+  887  (16:59:20 - 06/02/2017 - root ) -> rpm -ev EMCpower.LINUX-5.7.4.00.00-003.el5
+  888  (16:59:38 - 06/02/2017 - root ) -> rpm -qa | grep -i power
+  889  (16:59:55 - 06/02/2017 - root ) -> ifconfig
+  890  (16:59:58 - 06/02/2017 - root ) -> reboot
+  891  (17:11:03 - 06/02/2017 - root ) -> ls -l
+  892  (17:11:06 - 06/02/2017 - root ) -> mount
+  893  (17:11:10 - 06/02/2017 - root ) -> cd /opt/
+  894  (17:11:11 - 06/02/2017 - root ) -> ls -l
+  895  (17:11:14 - 06/02/2017 - root ) -> cd introscope/
+  896  (17:11:14 - 06/02/2017 - root ) -> ls -l
+  897  (17:11:18 - 06/02/2017 - root ) -> ls -l
+  898  (17:11:22 - 06/02/2017 - root ) -> mount
+  899  (17:11:24 - 06/02/2017 - root ) -> df -h
+  900  (17:11:34 - 06/02/2017 - root ) -> :q!
+  901  (16:17:48 - 07/02/2017 - root ) -> history
+  902  (16:17:54 - 07/02/2017 - root ) -> history | grep echo
+  903  (16:23:26 - 07/02/2017 - root ) ->  vf
+  904  (16:23:28 - 07/02/2017 - root ) -> vf
+  905  (16:29:14 - 07/02/2017 - root ) -> df -h
+  906  (16:29:21 - 07/02/2017 - root ) -> python --version
+  907  (16:29:29 - 07/02/2017 - root ) -> python
+  908  (16:29:59 - 07/02/2017 - root ) -> df -h
+  909  (16:32:17 - 07/02/2017 - root ) -> mount
+  910  (08:23:34 - 08/02/2017 - root ) -> git
+  911  (08:23:37 - 08/02/2017 - root ) -> yum install git
+  912  (08:24:37 - 08/02/2017 - root ) -> curl --help
+  913  (08:26:08 - 08/02/2017 - root ) -> curl https://github.com/dmarchetti/silver-broccoli
+  914  (08:43:19 - 08/02/2017 - root ) -> vim 
+  915  (08:43:22 - 08/02/2017 - root ) -> ls -l
+  916  (08:43:29 - 08/02/2017 - root ) -> mkdir _scripts
+  917  (08:43:31 - 08/02/2017 - root ) -> cd _scripts/
+  918  (08:43:32 - 08/02/2017 - root ) -> ls -l
+  919  (08:43:48 - 08/02/2017 - root ) -> touch migrate-to-lvm.sh
+  920  (08:43:52 - 08/02/2017 - root ) -> vi migrate-to-lvm.sh 
+  921  (08:45:50 - 08/02/2017 - root ) -> chmod +x migrate-to-lvm.sh 
+  922  (08:45:52 - 08/02/2017 - root ) -> ./migrate-to-lvm.sh 
+  923  (08:46:04 - 08/02/2017 - root ) -> vi migrate-to-lvm.sh 
+  924  (08:46:33 - 08/02/2017 - root ) -> ./migrate-to-lvm.sh 
+  925  (08:46:41 - 08/02/2017 - root ) -> vi migrate-to-lvm.sh 
+  926  (08:47:25 - 08/02/2017 - root ) -> ./migrate-to-lvm.sh 
+  927  (08:47:30 - 08/02/2017 - root ) -> vi migrate-to-lvm.sh 
+  928  (08:47:57 - 08/02/2017 - root ) -> ./migrate-to-lvm.sh 
+  929  (08:48:17 - 08/02/2017 - root ) -> dmesg 
+  930  (08:48:39 - 08/02/2017 - root ) -> cat /var/log/messages
+  931  (08:48:45 - 08/02/2017 - root ) -> ls -l
+  932  (08:49:04 - 08/02/2017 - root ) -> vi migrate-to-lvm.sh 
+  933  (08:52:43 - 08/02/2017 - root ) -> ls -l
+  934  (08:52:45 - 08/02/2017 - root ) -> cd _scripts/
+  935  (08:52:46 - 08/02/2017 - root ) -> ls -l
+  936  (08:52:54 - 08/02/2017 - root ) -> yum --help
+  937  (08:53:02 - 08/02/2017 - root ) -> yum search vim
+  938  (08:53:27 - 08/02/2017 - root ) -> yum install vim-enhanced.x86_64
+  939  (08:56:23 - 08/02/2017 - root ) -> python
+  940  (08:56:35 - 08/02/2017 - root ) -> ls -l
+  941  (08:56:50 - 08/02/2017 - root ) -> mv migrate-to-lvm.sh change-to-lvm.sh
+  942  (08:56:52 - 08/02/2017 - root ) -> ls -l
+  943  (08:57:11 - 08/02/2017 - root ) -> touch check-system.py
+  944  (08:57:14 - 08/02/2017 - root ) -> vi check-system.py 
+  945  (08:57:21 - 08/02/2017 - root ) -> vim check-system.py 
+  946  (08:57:43 - 08/02/2017 - root ) -> whereis python
+  947  (08:58:02 - 08/02/2017 - root ) -> vim check-system.py 
+  948  (09:02:56 - 08/02/2017 - root ) -> ls -l
+  949  (09:03:05 - 08/02/2017 - root ) -> chmod +x ch
+  950  (09:03:08 - 08/02/2017 - root ) -> chmod +x check-system.py 
+  951  (09:03:13 - 08/02/2017 - root ) -> vi check-system.py 
+  952  (09:03:20 - 08/02/2017 - root ) -> ./check-system.py 
+  953  (09:03:28 - 08/02/2017 - root ) -> vi check-system.py 
+  954  (09:03:36 - 08/02/2017 - root ) -> ./check-system.py 
+  955  (09:03:45 - 08/02/2017 - root ) -> vi check-system.py 
+  956  (09:03:59 - 08/02/2017 - root ) -> ./check-system.py 
+  957  (09:04:19 - 08/02/2017 - root ) -> mount
+  958  (09:04:41 - 08/02/2017 - root ) -> mount /mnt/teste/root/ /dev/sdc1
+  959  (09:04:55 - 08/02/2017 - root ) -> mount /dev/sdc1 /mnt/teste/root/
+  960  (09:05:00 - 08/02/2017 - root ) -> cd /mnt/teste/root/
+  961  (09:05:01 - 08/02/2017 - root ) -> ls -l
+  962  (09:05:04 - 08/02/2017 - root ) -> cd root/
+  963  (09:05:05 - 08/02/2017 - root ) -> ls -l
+  964  (09:05:14 - 08/02/2017 - root ) -> cp -rf /root/_scripts/ .
+  965  (09:05:16 - 08/02/2017 - root ) -> ls -l
+  966  (09:05:19 - 08/02/2017 - root ) -> pwd
+  967  (09:05:26 - 08/02/2017 - root ) -> mount
+  968  (09:05:54 - 08/02/2017 - root ) -> ping 172.26.9.223
+  969  (09:07:17 - 08/02/2017 - root ) -> ping 172.26.9.223
+  970  (09:07:35 - 08/02/2017 - root ) -> scp _scripts root@172.26.9.223:~
+  971  (09:07:48 - 08/02/2017 - root ) -> scp -r _scripts root@172.26.9.223:~
+  972  (09:07:55 - 08/02/2017 - root ) -> ls -l
+  973  (09:07:58 - 08/02/2017 - root ) -> exit
+  974  (09:13:59 - 15/02/2017 - root ) -> df -hP
+  975  (09:14:03 - 15/02/2017 - root ) -> ifconfig
+  976  (09:14:07 - 15/02/2017 - root ) -> netstat -rn
+  977  (09:14:11 - 15/02/2017 - root ) -> ping u19
+  978  (09:14:37 - 15/02/2017 - root ) -> df -hP
+  979  (09:14:44 - 15/02/2017 - root ) -> vgs
+  980  (09:14:57 - 15/02/2017 - root ) -> fdisk -l
+  981  (09:15:12 - 15/02/2017 - root ) -> fdisk -l
+  982  (09:15:15 - 15/02/2017 - root ) -> fdisk -l | more
+  983  (09:15:26 - 15/02/2017 - root ) -> vgs
+  984  (09:15:27 - 15/02/2017 - root ) -> lvs
+  985  (09:15:30 - 15/02/2017 - root ) -> df -hP
+  986  (09:23:45 - 15/02/2017 - root ) -> ll
+  987  (09:24:05 - 15/02/2017 - root ) -> ls
+  988  (09:24:15 - 15/02/2017 - root ) -> df -h
+  989  (09:27:52 - 15/02/2017 - root ) -> df -h
+  990  (09:28:11 - 15/02/2017 - root ) -> cd /opt/introscope/coletor7
+  991  (09:28:12 - 15/02/2017 - root ) -> ll
+  992  (09:30:43 - 15/02/2017 - root ) -> cd /opt/introscope/data7
+  993  (09:30:43 - 15/02/2017 - root ) -> ll
+  994  (16:56:25 - 22/02/2017 - root ) -> df -h
+  995  (16:56:29 - 22/02/2017 - root ) -> df -h
+  996  (16:56:35 - 22/02/2017 - root ) -> mount
+  997  (16:58:53 - 22/02/2017 - root ) -> vi /etc/fstab
+  998  (16:59:11 - 22/02/2017 - root ) -> vi /etc/fstab.bkp 
+  999  (16:59:26 - 22/02/2017 - root ) -> ls -l /etc/fstab
+ 1000  (16:59:30 - 22/02/2017 - root ) -> ls -l /etc/fstab*
+ 1001  (14:22:39 - 24/02/2017 - root ) -> history
+ 1002  (14:24:21 - 24/02/2017 - root ) -> mount
+ 1003  (14:28:32 - 24/02/2017 - root ) -> ifconfig
+ 1004  (14:28:49 - 24/02/2017 - root ) -> history >> history.log
